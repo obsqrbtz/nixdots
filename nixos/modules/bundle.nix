@@ -4,6 +4,7 @@
     ./env.nix
     ./user.nix
     ./nixvim/nixvim.nix
+    ./docker.nix
     #./xserver.nix
     ./nm.nix
     ./hyprland.nix

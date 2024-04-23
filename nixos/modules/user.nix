@@ -7,7 +7,7 @@
     users.dan = {
       isNormalUser = true;
       description = "Dan";
-      extraGroups = [ "networkmanager" "wheel" "input" ];
+      extraGroups = [ "networkmanager" "wheel" "input" "docker" ];
       packages = with pkgs; [];
     };
   };
