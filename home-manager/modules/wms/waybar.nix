@@ -35,15 +35,7 @@
     "clock" = {
         # timezone = "America/New_York";
         tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
-        format = "{:%a; %d %b, %I:%M %p}";
-    };
-
-    "custom/weather" = {
-        format = "{}";
-        tooltip = true;
-        interval = 1800;
-        exec = "$HOME/.config/waybar/scripts/wttr.py";
-        return-type = "json";
+        format = "{:%a %d %b %I:%M %p}";
     };
 
     "pulseaudio" = {
@@ -81,36 +73,6 @@
       min-length = 6;
     };
 
-    "temperature" = {
-        # thermal-zone = 2;
-        # hwmon-path = "/sys/class/hwmon/hwmon2/temp1_input";
-        critical-threshold = 80;
-        # format-critical = "{temperatureC}°C {icon}";
-        format = "{temperatureC}°C {icon}";
-        format-icons = ["" "" "" "" ""];
-        tooltip = false;
-    };
-
-    "backlight" = {
-        device = "intel_backlight";
-        format = "{percent}% {icon}";
-        format-icons = [""];
-        min-length = 7;
-    };
-
-    battery = {
-        states = {
-            warning = 30;
-            critical = 15;
-        };
-        format = "{capacity}% {icon}";
-        format-charging = "{capacity}% ";
-        format-plugged = "{capacity}% ";
-        format-alt = "{time} {icon}";
-        format-icons = ["" "" "" "" "" "" "" "" "" ""];
-	on-update = "$HOME/.config/waybar/scripts/check_battery.sh";
-    };
-
     tray = {
         icon-size = 16;
         spacing = 0;
@@ -140,17 +102,20 @@ window#waybar.hidden {
 
 #workspaces {
     margin-right: 8px;
+    padding-right: 4px;
+    padding-left: 4px;
     border-radius: 10px;
     transition: none;
     background: #121212;
 }
 
 #workspaces button {
+    margin: 8px;
     transition: none;
     color: #c2c2b0;
     background: transparent;
     padding: 5px;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 #workspaces button.persistent {
@@ -184,24 +149,6 @@ window#waybar.hidden {
 }
 
 #keyboard-state {
-    margin-right: 8px;
-    padding-right: 16px;
-    border-radius: 0px 10px 10px 0px;
-    transition: none;
-    color: #ffffff;
-    background: #121212;
-}
-
-#custom-pacman {
-    padding-left: 16px;
-    padding-right: 8px;
-    border-radius: 10px 0px 0px 10px;
-    transition: none;
-    color: #ffffff;
-    background: #121212;
-}
-
-#custom-mail {
     margin-right: 8px;
     padding-right: 16px;
     border-radius: 0px 10px 10px 0px;
