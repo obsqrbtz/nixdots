@@ -29,8 +29,8 @@
     LC_TIME = "ru_RU.UTF-8";
   };
 
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  #services.xserver.displayManager.gdm.enable = true;
+  #services.xserver.desktopManager.gnome.enable = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 

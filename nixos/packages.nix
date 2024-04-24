@@ -61,8 +61,9 @@
     hyprland
     seatd
     xdg-desktop-portal-hyprland
-    polybar
     waybar
+    libsForQt5.qt5.qtwayland
+    qt6.qtwayland
 
     # Sound
     pipewire
@@ -88,6 +89,7 @@
 
     # Other
     home-manager
+    udiskie
   ];
 
   fonts.packages = with pkgs; [

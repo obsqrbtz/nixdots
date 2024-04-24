@@ -124,6 +124,7 @@
         "wl-paste --type image --watch cliphist store"
         "lxqt-policykit-agent"
 	"mako"
+	"udiskie"
       ];
 
       bind = [
