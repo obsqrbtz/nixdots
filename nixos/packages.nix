@@ -44,7 +44,7 @@
     # GUI utils
     feh
     dmenu
-
+   
     # Xorg stuff
     #xterm
     #xclip
@@ -54,6 +54,7 @@
     xwayland
     wl-clipboard
     cliphist
+    mako
 
     # WMs and stuff
     hyprland
