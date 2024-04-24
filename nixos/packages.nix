@@ -17,9 +17,8 @@
     gnumake
     gcc
     nodejs
-    dotnet-sdk_8
-    mono
     vscode
+    jetbrains.rider
     python
     (python3.withPackages (ps: with ps; [ requests ]))
 
