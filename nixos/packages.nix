@@ -40,6 +40,7 @@
     openssl
     vim
     lxqt.lxqt-policykit
+    libnotify
 
     # GUI utils
     feh
