@@ -1,5 +1,5 @@
 {
-  programs.mako = {
+  services.mako = {
     enable = true;
     layer = "overlay";
     font = "JetBrainsMono 13";
