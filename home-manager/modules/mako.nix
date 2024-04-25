@@ -12,7 +12,7 @@
     borderRadius = 10;
     borderSize = 3;
     backgroundColor = "#${config.colorScheme.palette.base00}";
-    textColor = "#${config.colorScheme.palette.base0F}";
-    borderColor = "#${config.colorScheme.palette.base01}";
+    textColor = "#${config.colorScheme.palette.base07}";
+    borderColor = "#${config.colorScheme.palette.base08}";
   };
 }

@@ -1,26 +1,26 @@
 { pkgs, config, nix-colors, ... }: {
 
     colorScheme = {
-        slug = "shades";
-        name = "Shades";
-        author = "Some guy from dotshare.it";
+        slug = "darkfuneral";
+        name = "Black Metal (Dark Funeral)";
+        author = "metalelf0 (https://github.com/metalelf0)";
         palette = {
-            base00 = "#121212";
-            base01 = "#5F8787";
-            base02 = "#444444";
-            base03 = "#666666";
-            base04 = "#888888";
-            base05 = "#999999";
-            base06 = "#aaaaaa";
-            base07 = "#c1c1c1";
-            base08 = "#666666";
-            base09 = "#5F8787";
-            base0A = "#444444";
-            base0B = "#666666";
-            base0C = "#888888";
-            base0D = "#999999";
-            base0E = "#aaaaaa";
-            base0F = "#c1c1c1";
+          base00 = "#000000";
+          base01 = "#121212";
+          base02 = "#222222";
+          base03 = "#333333";
+          base04 = "#999999";
+          base05 = "#c1c1c1";
+          base06 = "#999999";
+          base07 = "#c1c1c1";
+          base08 = "#5f8787";
+          base09 = "#aaaaaa";
+          base0A = "#5f81a5";
+          base0B = "#d0dfee";
+          base0C = "#aaaaaa";
+          base0D = "#888888";
+          base0E = "#999999";
+          base0F = "#444444";
         };
   };
   

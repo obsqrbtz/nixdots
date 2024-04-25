@@ -5,6 +5,13 @@
     ./modules/bundle.nix
   ];
 
+  # colorScheme = inputs.nix-colors.lib.schemeFromYAML "cool-scheme" 
+  #   (builtins.readFile
+  #     (builtins.fetchurl({
+  #       url = "https://raw.githubusercontent.com/chawyehsu/base16-snazzy-scheme/master/snazzy.yaml";
+  #       sha256 = "1c7v83rqd0c7nfb24ki3a8zz8vdk6i16jpdzpncv7kc9i371qgv1";
+  #     })));
+
   home.sessionVariables = {
     XCURSOR_THEME = "Bibata-Modern-Ice";
     XCURSOR_SIZE = "24";

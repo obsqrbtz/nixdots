@@ -107,20 +107,20 @@ window#waybar.hidden {
     padding-left: 4px;
     border-radius: 10px;
     transition: none;
-    background: #121212;
+    background: #${config.colorScheme.palette.base00};
 }
 
 #workspaces button {
     margin: 8px;
     transition: none;
-    color: #${config.colorScheme.palette.base0F};
+    color: #${config.colorScheme.palette.base07};
     background: transparent;
     padding: 5px;
     font-size: 14px;
 }
 
 #workspaces button.persistent {
-    color: #${config.colorScheme.palette.base0F};
+    color: #${config.colorScheme.palette.base07};
     font-size: 12px;
 }
 
@@ -130,12 +130,12 @@ window#waybar.hidden {
     box-shadow: inherit;
     text-shadow: inherit;
     border-radius: inherit;
-    color: #${config.colorScheme.palette.base00};
-    background: #${config.colorScheme.palette.base0F};
+    color: #${config.colorScheme.palette.base07};
+    background: #${config.colorScheme.palette.base03};
 }
 
 #workspaces button.active {
-    background: #${config.colorScheme.palette.base09};
+    background: #${config.colorScheme.palette.base08};
     color: white;
     border-radius: inherit;
 }
@@ -145,7 +145,7 @@ window#waybar.hidden {
     padding-right: 8px;
     border-radius: 10px 0px 0px 10px;
     transition: none;
-    color: #${config.colorScheme.palette.base0F};
+    color: #${config.colorScheme.palette.base07};
     background: #${config.colorScheme.palette.base00};
 }
 
@@ -154,7 +154,7 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 0px 10px 10px 0px;
     transition: none;
-    color: #${config.colorScheme.palette.base0F};
+    color: #${config.colorScheme.palette.base07};
     background: #${config.colorScheme.palette.base00};
 }
 
@@ -163,7 +163,7 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    color: #${config.colorScheme.palette.base0F};
+    color: #${config.colorScheme.palette.base07};
     background: #${config.colorScheme.palette.base00};
 }
 
@@ -172,7 +172,7 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    color: #${config.colorScheme.palette.base0F};
+    color: #${config.colorScheme.palette.base07};
     background: #${config.colorScheme.palette.base00};
 }
 
@@ -182,13 +182,13 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    color: #${config.colorScheme.palette.base0F};
+    color: #${config.colorScheme.palette.base07};
     background: #${config.colorScheme.palette.base00};
 }
 
 #pulseaudio.muted {
     background-color: #${config.colorScheme.palette.base00};
-    color: #${config.colorScheme.palette.base0F};
+    color: #${config.colorScheme.palette.base07};
 }
 
 #custom-mem {
@@ -197,7 +197,7 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    color: #${config.colorScheme.palette.base0F};
+    color: #${config.colorScheme.palette.base07};
     background: #${config.colorScheme.palette.base00};
 }
 
@@ -207,7 +207,7 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    color: #${config.colorScheme.palette.base0F};
+    color: #${config.colorScheme.palette.base07};
     background: #${config.colorScheme.palette.base00};
 }
 
@@ -217,7 +217,7 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    color: #${config.colorScheme.palette.base0F};
+    color: #${config.colorScheme.palette.base07};
     background: #${config.colorScheme.palette.base00};
 }
 
@@ -230,13 +230,13 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    color: #${config.colorScheme.palette.base0F};
+    color: #${config.colorScheme.palette.base07};
     background: #${config.colorScheme.palette.base00};
 }
 
 @keyframes blink {
     to {
-        background-color: #${config.colorScheme.palette.base0F};
+        background-color: #${config.colorScheme.palette.base07};
         color: #${config.colorScheme.palette.base00};
     }
 }
