@@ -23,9 +23,11 @@
     (python3.withPackages (ps: with ps; [ requests ]))
 
     # CLI utils
-    neofetch
     file
     lsd
+    fzf
+    btop
+    dfc
     tree
     wget
     git
@@ -41,6 +43,8 @@
     vim
     lxqt.lxqt-policykit
     libnotify
+    neofetch
+    onefetch
 
     # GUI utils
     feh
