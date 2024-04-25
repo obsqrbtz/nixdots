@@ -5,14 +5,12 @@
 
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11";
+
     nix-colors.url = "github:misterio77/nix-colors";
 
     home-manager = {
       url = "github:nix-community/home-manager";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        nix-colors.follows = "nix-colors";
-      };
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     nixvim = {
@@ -36,6 +34,7 @@
         };
         inherit inputs system;
       };
+      extraSpecialArgs = { inherit nix-colors; };
       modules = [
         ./nixos/configuration.nix
         inputs.nixvim.nixosModules.nixvim
@@ -44,7 +43,6 @@
 
     homeConfigurations.dan = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.${system};
-      extraSpecialArgs = { inherit nix-colors; };
       modules = [ ./home-manager/home.nix ];
     };
   };
