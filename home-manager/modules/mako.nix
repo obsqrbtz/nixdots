@@ -3,9 +3,9 @@
   services.mako = {
     enable = true;
     layer = "overlay";
-    font = "JetBrainsMono 13";
+    font = "JetBrainsMono 11";
     width = 300;
-    height = 80;
+    height = 140;
     defaultTimeout = 4000;
     maxVisible = 10;
     margin = "25,25,25,25";
