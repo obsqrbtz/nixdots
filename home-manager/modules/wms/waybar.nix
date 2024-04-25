@@ -1,3 +1,4 @@
+{config, nixpkgs, ...}:
 {
   programs.waybar = {
     enable = true;
@@ -112,14 +113,14 @@ window#waybar.hidden {
 #workspaces button {
     margin: 8px;
     transition: none;
-    color: #c2c2b0;
+    color: #${config.colorScheme.palette.base0F};
     background: transparent;
     padding: 5px;
     font-size: 14px;
 }
 
 #workspaces button.persistent {
-    color: #c2c2b0;
+    color: #${config.colorScheme.palette.base0F};
     font-size: 12px;
 }
 
@@ -129,12 +130,12 @@ window#waybar.hidden {
     box-shadow: inherit;
     text-shadow: inherit;
     border-radius: inherit;
-    color: #121212;
-    background: #c2c2b0;
+    color: #${config.colorScheme.palette.base00};
+    background: #${config.colorScheme.palette.base0F};
 }
 
 #workspaces button.active {
-    background: #5F8787;
+    background: #${config.colorScheme.palette.base09};
     color: white;
     border-radius: inherit;
 }
@@ -144,8 +145,8 @@ window#waybar.hidden {
     padding-right: 8px;
     border-radius: 10px 0px 0px 10px;
     transition: none;
-    color: #ffffff;
-    background: #121212;
+    color: #${config.colorScheme.palette.base0F};
+    background: #${config.colorScheme.palette.base00};
 }
 
 #keyboard-state {
@@ -153,8 +154,8 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 0px 10px 10px 0px;
     transition: none;
-    color: #ffffff;
-    background: #121212;
+    color: #${config.colorScheme.palette.base0F};
+    background: #${config.colorScheme.palette.base00};
 }
 
 #submap {
@@ -162,8 +163,8 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    color: #ffffff;
-    background: #121212;
+    color: #${config.colorScheme.palette.base0F};
+    background: #${config.colorScheme.palette.base00};
 }
 
 #clock {
@@ -171,8 +172,8 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    color: #ffffff;
-    background: #121212;
+    color: #${config.colorScheme.palette.base0F};
+    background: #${config.colorScheme.palette.base00};
 }
 
 #pulseaudio {
@@ -181,13 +182,13 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    color: #ffffff;
-    background: #121212;
+    color: #${config.colorScheme.palette.base0F};
+    background: #${config.colorScheme.palette.base00};
 }
 
 #pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
+    background-color: #${config.colorScheme.palette.base00};
+    color: #${config.colorScheme.palette.base0F};
 }
 
 #custom-mem {
@@ -196,8 +197,8 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    color: #ffffff;
-    background: #121212;
+    color: #${config.colorScheme.palette.base0F};
+    background: #${config.colorScheme.palette.base00};
 }
 
 #cpu {
@@ -206,8 +207,8 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    color: #ffffff;
-    background: #121212;
+    color: #${config.colorScheme.palette.base0F};
+    background: #${config.colorScheme.palette.base00};
 }
 
 #temperature {
@@ -216,12 +217,12 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    color: #ffffff;
-    background: #121212;
+    color: #${config.colorScheme.palette.base0F};
+    background: #${config.colorScheme.palette.base00};
 }
 
 #temperature.critical {
-    background-color: #eb4d4b;
+    background-color: #${config.colorScheme.palette.base01};
 }
 
 #tray {
@@ -229,14 +230,14 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    color: #ffffff;
-    background: #121212;
+    color: #${config.colorScheme.palette.base0F};
+    background: #${config.colorScheme.palette.base00};
 }
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: #000000;
+        background-color: #${config.colorScheme.palette.base0F};
+        color: #${config.colorScheme.palette.base00};
     }
 }
       '';

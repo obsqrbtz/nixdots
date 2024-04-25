@@ -1,3 +1,4 @@
+{config, nixpkgs, ...}:
 {
   services.mako = {
     enable = true;
@@ -10,8 +11,8 @@
     margin = "25,25,25,25";
     borderRadius = 10;
     borderSize = 3;
-    backgroundColor = "#121212";
-    textColor = "#c2c2b0";
-    borderColor = "#5f8787";
+    backgroundColor = "#${config.colorScheme.palette.base00}";
+    textColor = "#${config.colorScheme.palette.base0F}";
+    borderColor = "#${config.colorScheme.palette.base01}";
   };
 }

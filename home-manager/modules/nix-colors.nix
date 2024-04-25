@@ -1,14 +1,11 @@
 { pkgs, config, nix-colors, ... }: {
-  imports = [
-    nix-colors.homeManagerModules.default
-  ];
 
     colorScheme = {
         slug = "shades";
         name = "Shades";
         author = "Some guy from dotshare.it";
         palette = {
-            base00 = "#666666";
+            base00 = "#121212";
             base01 = "#5F8787";
             base02 = "#444444";
             base03 = "#666666";
@@ -26,4 +23,5 @@
             base0F = "#c1c1c1";
         };
   };
+  
 }

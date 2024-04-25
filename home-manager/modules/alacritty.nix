@@ -1,4 +1,4 @@
-{ nix-colors, ... }:
+{config, nixpkgs, ...}:
 {
   programs.alacritty = {
     enable = true;
@@ -21,12 +21,12 @@
 
       colors = {
         primary = {
-          foreground = "#c2c2b0";
-          background = "#121212";
+          foreground = "#${config.colorScheme.palette.base0F}";
+          background = "#${config.colorScheme.palette.base00}";
         };
         cursor = {
-          text = "#121212";
-          cursor = "#c2c2b0";
+          text = "#${config.colorScheme.palette.base00}";
+          cursor = "#${config.colorScheme.palette.base0F}";
         };
         normal = {
           black = "#${config.colorScheme.palette.base00}";
