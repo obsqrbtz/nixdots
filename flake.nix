@@ -19,7 +19,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-stable, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, nixpkgs-stable, home-manager, nix-colors, ... }@inputs:
 
     let
       system = "x86_64-linux";
@@ -34,7 +34,6 @@
         };
         inherit inputs system;
       };
-      extraSpecialArgs = { inherit nix-colors; };
       modules = [
         ./nixos/configuration.nix
         inputs.nixvim.nixosModules.nixvim
@@ -43,6 +42,7 @@
 
     homeConfigurations.dan = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.${system};
+      extraSpecialArgs = { inherit nix-colors; };
       modules = [ ./home-manager/home.nix ];
     };
   };
