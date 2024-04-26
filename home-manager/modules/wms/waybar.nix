@@ -91,6 +91,7 @@ window#waybar.hidden {
     margin-right: 8px;
     padding-right: 4px;
     padding-left: 4px;
+    border-radius: 0px;
     transition: none;
     background: #${config.colorScheme.palette.base00};
 }
@@ -99,6 +100,7 @@ window#waybar.hidden {
     margin: 8px;
     font-size: 14px;
     transition: none;
+    border-radius: 0px;
     color: #${config.colorScheme.palette.base07};
     background: transparent;
     padding: 5px;
@@ -113,6 +115,7 @@ window#waybar.hidden {
     transition: none;
     box-shadow: inherit;
     text-shadow: inherit;
+    border-radius: 0px;
     color: #${config.colorScheme.palette.base00};
     background: #${config.colorScheme.palette.base07};
 }
