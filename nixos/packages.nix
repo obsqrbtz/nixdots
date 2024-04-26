@@ -18,6 +18,8 @@
     gcc
     nodejs
     vscode
+    cargo
+    rustc
     jetbrains.rider
     python
     (python3.withPackages (ps: with ps; [ requests ]))
