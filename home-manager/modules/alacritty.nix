@@ -11,42 +11,45 @@
         };
       };
       font = {
-        size = 12.0;
-        # draw_bold_text_with_bright_colors = true;
+        size = 14.0;
+        #draw_bold_text_with_bright_colors = false;
         normal = {
-          family = "JetBrains Mono";
-          style = "Bold";
+          family = "GohuFont";
+        };
+        bold = {
+          family = "GohuFont";
+          style = "Regular";
         };
       };
 
       colors = {
         primary = {
-          foreground = "#${config.colorScheme.palette.base0F}";
+          foreground = "#${config.colorScheme.palette.base05}";
           background = "#${config.colorScheme.palette.base00}";
         };
         cursor = {
           text = "#${config.colorScheme.palette.base00}";
-          cursor = "#${config.colorScheme.palette.base0F}";
+          cursor = "#${config.colorScheme.palette.base05}";
         };
         normal = {
           black = "#${config.colorScheme.palette.base00}";
-          red = "#${config.colorScheme.palette.base01}";
-          green = "#${config.colorScheme.palette.base02}";
-          yellow = "#${config.colorScheme.palette.base03}";
-          blue = "#${config.colorScheme.palette.base04}";
-          magenta = "#${config.colorScheme.palette.base05}";
-          cyan = "#${config.colorScheme.palette.base06}";
-          white = "#${config.colorScheme.palette.base07}";
+          red = "#${config.colorScheme.palette.base08}";
+          green = "#${config.colorScheme.palette.base0B}";
+          yellow = "#${config.colorScheme.palette.base0A}";
+          blue = "#${config.colorScheme.palette.base0D}";
+          magenta = "#${config.colorScheme.palette.base0E}";
+          cyan = "#${config.colorScheme.palette.base0C}";
+          white = "#${config.colorScheme.palette.base05}";
         };
         bright = {
-          black = "#${config.colorScheme.palette.base08}";
+          black = "#${config.colorScheme.palette.base03}";
           red = "#${config.colorScheme.palette.base09}";
-          green = "#${config.colorScheme.palette.base0A}";
-          yellow = "#${config.colorScheme.palette.base0B}";
-          blue = "#${config.colorScheme.palette.base0C}";
-          magenta = "#${config.colorScheme.palette.base0D}";
-          cyan = "#${config.colorScheme.palette.base0E}";
-          white = "#${config.colorScheme.palette.base0F}";
+          green = "#${config.colorScheme.palette.base08}";
+          yellow = "#${config.colorScheme.palette.base02}";
+          blue = "#${config.colorScheme.palette.base04}";
+          magenta = "#${config.colorScheme.palette.base06}";
+          cyan = "#${config.colorScheme.palette.base0F}";
+          white = "#${config.colorScheme.palette.base07}";
         };
       };
     };

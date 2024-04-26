@@ -5,11 +5,11 @@
     ./modules/bundle.nix
   ];
 
-  # colorScheme = inputs.nix-colors.lib.schemeFromYAML "cool-scheme" 
+  # colorScheme = inputs.nix-colors.lib.schemeFromYAML "palette" 
   #   (builtins.readFile
   #     (builtins.fetchurl({
-  #       url = "https://raw.githubusercontent.com/chawyehsu/base16-snazzy-scheme/master/snazzy.yaml";
-  #       sha256 = "1c7v83rqd0c7nfb24ki3a8zz8vdk6i16jpdzpncv7kc9i371qgv1";
+  #       url = "https://raw.githubusercontent.com/metalelf0/base16-black-metal-scheme/master/black-metal.yaml";
+  #       sha256 = "sha256:0fba5l8yx9lxppqn7gcdc371c4rdc27iyfk56vfjzxpgs40qr439";
   #     })));
 
   home.sessionVariables = {

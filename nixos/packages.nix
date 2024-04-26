@@ -97,6 +97,11 @@
   ];
 
   fonts.packages = with pkgs; [
+  # Bitmap
+    cozette 
+    # tewi-font #small
+    gohufont 
+  # Standard
     jetbrains-mono
     noto-fonts
     noto-fonts-emoji

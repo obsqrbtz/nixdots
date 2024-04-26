@@ -6,11 +6,10 @@
       mainBar = {
         layer = "top";
         position = "top";
-        margin = "9 13 -10 18";
 
-        modules-left = ["hyprland/workspaces" "hyprland/language" "keyboard-state" "hyprland/submap"];
+        modules-left = ["hyprland/workspaces" "hyprland/submap"];
         modules-center = ["clock"];
-        modules-right = ["pulseaudio" "custom/mem" "cpu" "tray"];
+        modules-right = ["pulseaudio" "hyprland/language" "keyboard-state" "tray"];
 
         "hyprland/workspaces" = {
           disable-scroll = true;
@@ -61,19 +60,6 @@
         min-length = 13;
     };
 
-    "custom/mem" = {
-        format = "{} ";
-        interval = 3;
-        exec = "free -h | awk '/Mem:/{printf $3}'";
-        tooltip = false;
-    };
-
-    "cpu" = {
-      interval = 2;
-      format = "{usage}% ";
-      min-length = 6;
-    };
-
     tray = {
         icon-size = 16;
         spacing = 0;
@@ -88,13 +74,14 @@
     border: none;
     border-radius: 0;
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: JetBrains Mono;
-    font-weight: bold; 
+    font-family: GohuFont;
+    /*font-weight: bold; */
     min-height: 20px;
 }
 
 window#waybar {
-    background: transparent;
+    background: #${config.colorScheme.palette.base00};
+    padding: 1px;
 }
 
 window#waybar.hidden {
@@ -105,23 +92,23 @@ window#waybar.hidden {
     margin-right: 8px;
     padding-right: 4px;
     padding-left: 4px;
-    border-radius: 10px;
+    border-radius: 0px;
     transition: none;
     background: #${config.colorScheme.palette.base00};
 }
 
 #workspaces button {
     margin: 8px;
+    font-size: 14px;
     transition: none;
+    border-radius: 4px;
     color: #${config.colorScheme.palette.base07};
     background: transparent;
     padding: 5px;
-    font-size: 14px;
 }
 
 #workspaces button.persistent {
     color: #${config.colorScheme.palette.base07};
-    font-size: 12px;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
@@ -129,58 +116,46 @@ window#waybar.hidden {
     transition: none;
     box-shadow: inherit;
     text-shadow: inherit;
-    border-radius: inherit;
+    border-radius: 4px;
     color: #${config.colorScheme.palette.base07};
     background: #${config.colorScheme.palette.base03};
 }
 
 #workspaces button.active {
-    background: #${config.colorScheme.palette.base08};
-    color: white;
-    border-radius: inherit;
+    background: #${config.colorScheme.palette.base07};
+    color: #${config.colorScheme.palette.base00};
+    border-radius: 4px;
 }
 
 #language {
-    padding-left: 16px;
-    padding-right: 8px;
-    border-radius: 10px 0px 0px 10px;
     transition: none;
     color: #${config.colorScheme.palette.base07};
     background: #${config.colorScheme.palette.base00};
 }
 
 #keyboard-state {
+    padding: 5px;
     margin-right: 8px;
-    padding-right: 16px;
-    border-radius: 0px 10px 10px 0px;
     transition: none;
     color: #${config.colorScheme.palette.base07};
     background: #${config.colorScheme.palette.base00};
 }
 
 #submap {
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
     transition: none;
     color: #${config.colorScheme.palette.base07};
     background: #${config.colorScheme.palette.base00};
 }
 
 #clock {
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
     transition: none;
     color: #${config.colorScheme.palette.base07};
     background: #${config.colorScheme.palette.base00};
 }
 
 #pulseaudio {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
+    margin: 8px;
+    padding: 5px;
     transition: none;
     color: #${config.colorScheme.palette.base07};
     background: #${config.colorScheme.palette.base00};
@@ -191,46 +166,10 @@ window#waybar.hidden {
     color: #${config.colorScheme.palette.base07};
 }
 
-#custom-mem {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: #${config.colorScheme.palette.base07};
-    background: #${config.colorScheme.palette.base00};
-}
-
-#cpu {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: #${config.colorScheme.palette.base07};
-    background: #${config.colorScheme.palette.base00};
-}
-
-#temperature {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: #${config.colorScheme.palette.base07};
-    background: #${config.colorScheme.palette.base00};
-}
-
-#temperature.critical {
-    background-color: #${config.colorScheme.palette.base01};
-}
-
 #tray {
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
+    margin-right: 16px;
     transition: none;
-    color: #${config.colorScheme.palette.base07};
+    color: #${config.colorScheme.palette.base05};
     background: #${config.colorScheme.palette.base00};
 }
 

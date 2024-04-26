@@ -40,9 +40,9 @@
       };
 
       general = {
-        gaps_in = 5;
-        gaps_out = 20;
-        border_size = 3;
+        gaps_in = 0;
+        gaps_out = 0;
+        border_size = 1;
         "col.active_border" = "rgba(${config.colorScheme.palette.base08}FF) rgba(${config.colorScheme.palette.base0A}FF) 45deg";
         "col.inactive_border" = "rgba(${config.colorScheme.palette.base0F}AA)";
 
@@ -52,7 +52,7 @@
       };
 
       decoration = {
-        rounding = 10;
+        rounding = 0;
 
         blur = {
           enabled = true;
@@ -117,7 +117,7 @@
 
       exec-once = [
         "swww init"
-        "swww img ~/Pictures/walls/wallhaven-jxl31y.png"
+        "swww img ~/Pictures/walls/8b9e3020a2482b73870756a347cd1fa9.jpg"
         "hyprctl setcursor Bibata-Modern-Ice 24"
         "gsettings set org.gnome.desktop.interface cursor-theme 'Bibata-Modern-Ice'"
         "waybar"

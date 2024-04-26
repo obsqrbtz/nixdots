@@ -4,8 +4,8 @@
         enable = true;
         interactiveShellInit = ''
         set fish_greeting '';
-        plugins = [
-        { name = "pure"; src = pkgs.fishPlugins.pure.src; }
-        ];
+        #plugins = [
+        #{ name = "hydro"; src = pkgs.fishPlugins.hydro.src; }
+        #];
     };
 }
