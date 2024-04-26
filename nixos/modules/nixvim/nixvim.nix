@@ -13,13 +13,17 @@
           nixd.enable = true;
           bashls.enable = true;
           clangd.enable = true;
-          rust-analyzer.enable = true;
+          rust-analyzer = {
+            enable = true;
+            installRustc = true;
+            installCargo = true;
+          };
           csharp-ls.enable = true;
         };
       };
       cmp = {
         enable = true;
-        completion.autocomplete = [ "TextChanged" ];
+        settings.completion.autocomplete = [ "TextChanged" ];
       };
     };
   };
