@@ -24,12 +24,12 @@
 
       colors = {
         primary = {
-          foreground = "#${config.colorScheme.palette.base05}";
+          foreground = "#${config.colorScheme.palette.base0F}";
           background = "#${config.colorScheme.palette.base00}";
         };
         cursor = {
           text = "#${config.colorScheme.palette.base00}";
-          cursor = "#${config.colorScheme.palette.base05}";
+          cursor = "#${config.colorScheme.palette.base0F}";
         };
         normal = {
           black = "#${config.colorScheme.palette.base00}";
