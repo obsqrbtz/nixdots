@@ -44,7 +44,7 @@
         gaps_out = 0;
         border_size = 1;
         "col.active_border" = "rgba(${config.colorScheme.palette.base08}FF) rgba(${config.colorScheme.palette.base0A}FF) 45deg";
-        "col.inactive_border" = "rgba(${config.colorScheme.palette.base0F}AA)";
+        "col.inactive_border" = "rgba(${config.colorScheme.palette.base0F}FF)";
 
         layout = "dwindle";
 
