@@ -28,8 +28,8 @@
           background = "#${config.colorScheme.palette.base00}";
         };
         cursor = {
-          text = "#${config.colorScheme.palette.base07}";
-          cursor = "#${config.colorScheme.palette.base00}";
+          text = "#${config.colorScheme.palette.base00}";
+          cursor = "#${config.colorScheme.palette.base07}";
         };
         normal = {
           black = "#${config.colorScheme.palette.base00}";
