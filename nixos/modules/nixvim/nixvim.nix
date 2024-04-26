@@ -5,7 +5,6 @@
     defaultEditor = true;
     plugins = {
       lightline.enable = true;
-      cmp.enable = true;
       telescope.enable = true;
       treesitter.enable = true;
       lsp = {
@@ -18,7 +17,7 @@
           csharp-ls.enable = true;
         };
       };
-      nvim-cmp = {
+      cmp = {
         enable = true;
         completion.autocomplete = [ "TextChanged" ];
       };

@@ -33,7 +33,7 @@
         };
         normal = {
           black = "#${config.colorScheme.palette.base00}";
-          red = "#${config.colorScheme.palette.base08}";
+          red = "#${config.colorScheme.palette.base01}";
           green = "#${config.colorScheme.palette.base0B}";
           yellow = "#${config.colorScheme.palette.base0A}";
           blue = "#${config.colorScheme.palette.base0D}";
