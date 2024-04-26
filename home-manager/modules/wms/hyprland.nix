@@ -117,15 +117,15 @@
 
       exec-once = [
         "swww init"
-        "swww img ~/Pictures/walls/8b9e3020a2482b73870756a347cd1fa9.jpg"
+        "swww img ~/Pictures/walls/lorna-shore.png"
         "hyprctl setcursor Bibata-Modern-Ice 24"
         "gsettings set org.gnome.desktop.interface cursor-theme 'Bibata-Modern-Ice'"
         "waybar"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
         "lxqt-policykit-agent"
-	"mako"
-	"udiskie"
+        "mako"
+        "udiskie"
       ];
 
       bind = [

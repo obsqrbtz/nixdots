@@ -16,9 +16,9 @@
         };
 
     "hyprland/language" = {
-        format-en = "US";
-        format-ru = "RU";
-	      min-length = 5;
+        format-en = "us";
+        format-ru = "ru";
+	      min-length = 3;
 	      tooltip = false;
     };
 
@@ -72,7 +72,6 @@
       ''
 * {
     border: none;
-    border-radius: 0;
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: GohuFont;
     /*font-weight: bold; */
@@ -92,7 +91,6 @@ window#waybar.hidden {
     margin-right: 8px;
     padding-right: 4px;
     padding-left: 4px;
-    border-radius: 0px;
     transition: none;
     background: #${config.colorScheme.palette.base00};
 }
@@ -101,7 +99,6 @@ window#waybar.hidden {
     margin: 8px;
     font-size: 14px;
     transition: none;
-    border-radius: 4px;
     color: #${config.colorScheme.palette.base07};
     background: transparent;
     padding: 5px;
@@ -116,15 +113,13 @@ window#waybar.hidden {
     transition: none;
     box-shadow: inherit;
     text-shadow: inherit;
-    border-radius: 4px;
-    color: #${config.colorScheme.palette.base07};
-    background: #${config.colorScheme.palette.base03};
+    color: #${config.colorScheme.palette.base00};
+    background: #${config.colorScheme.palette.base07};
 }
 
 #workspaces button.active {
-    background: #${config.colorScheme.palette.base07};
+    background: #${config.colorScheme.palette.base03};
     color: #${config.colorScheme.palette.base00};
-    border-radius: 4px;
 }
 
 #language {
@@ -154,7 +149,7 @@ window#waybar.hidden {
 }
 
 #pulseaudio {
-    margin: 8px;
+    margin: 4px;
     padding: 5px;
     transition: none;
     color: #${config.colorScheme.palette.base07};
