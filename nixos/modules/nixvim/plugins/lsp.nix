@@ -4,7 +4,7 @@
     treesitter = {
       enable = true;
       nixvimInjections = true;
-      folding = true;
+      folding = false;
       indent = true;
     };
 
