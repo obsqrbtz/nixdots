@@ -114,6 +114,10 @@
       windowrule = [
         "float, ^(lxqt-policykit-agent)$"
       ];
+      windowrulev2 = [
+        "stayfocused, title:^(),class:^(steam)"
+        "minsize 1 1 , title:^(),class:^(steam)"
+      ];
 
       exec-once = [
         "swww init"
