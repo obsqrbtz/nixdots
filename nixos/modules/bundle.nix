@@ -5,9 +5,9 @@
     ./user.nix
     ./nixvim/nixvim.nix
     ./docker.nix
-    #./xserver.nix
     ./nm.nix
     ./hyprland.nix
+    ./steam.nix
     #./trim.nix
     #./bluetooth.nix
   ];
