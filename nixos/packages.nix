@@ -74,6 +74,8 @@
     pulseaudio
     pamixer
 
+
+    steam
     # GPU stuff 
     amdvlk
 
