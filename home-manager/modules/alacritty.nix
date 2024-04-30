@@ -11,14 +11,14 @@
         };
       };
       font = {
-        size = 14.0;
+        size = 12.0;
         #draw_bold_text_with_bright_colors = false;
         normal = {
-          family = "GohuFont";
+          family = "JetBrains Mono";
         };
         bold = {
-          family = "GohuFont";
-          style = "Regular";
+          family = "JetBrains Mono";
+          style = "Bold";
         };
       };
 

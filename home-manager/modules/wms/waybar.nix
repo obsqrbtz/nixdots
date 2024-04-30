@@ -73,7 +73,8 @@
 * {
     border: none;
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: GohuFont;
+    font-family: JetBrains Mono;
+    font-size: 14px;
     /*font-weight: bold; */
     min-height: 20px;
 }
@@ -98,7 +99,6 @@ window#waybar.hidden {
 
 #workspaces button {
     margin: 8px;
-    font-size: 14px;
     transition: none;
     border-radius: 0px;
     color: #${config.colorScheme.palette.base07};

@@ -14,7 +14,7 @@
 
   gtk = {
     enable = true;
-    font.name = "GohuFont 11";
+    font.name = "JetBrains Mono 10";
     theme = {
       name = "Gruvbox-Dark-BL-LB";
       package = pkgs.gruvbox-gtk-theme;
