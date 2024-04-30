@@ -78,7 +78,6 @@
 
     # Music
     spotify
-    spicetify-cli
 
     # Theming
     bibata-cursors

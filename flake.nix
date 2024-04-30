@@ -44,7 +44,6 @@
         pkgs = nixpkgs.legacyPackages.${system};
         extraSpecialArgs = { inherit inputs; };
         modules = [ 
-          ./spicetify.nix
           ./home-manager/home.nix 
         ];
       };
