@@ -76,6 +76,10 @@
     grim
     slurp
 
+    # Music
+    spotify
+    spicetify-cli
+
     # Theming
     bibata-cursors
     (catppuccin-gtk.override {
