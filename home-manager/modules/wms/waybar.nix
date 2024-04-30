@@ -62,7 +62,7 @@
 
     tray = {
         icon-size = 16;
-        spacing = 0;
+        spacing = 2;
     };
 
       };
