@@ -11,7 +11,6 @@
     alacritty
     wofi
     discord
-    gparted
     
     # Coding stuff
     gnumake
@@ -44,16 +43,7 @@
     libnotify
     neofetch
     onefetch
-
-    # GUI utils
-    feh
-    dmenu
    
-    # Xorg stuff
-    #xterm
-    #xclip
-    #xorg.xbacklight
-
     # Wayland stuff
     xwayland
     wl-clipboard
@@ -74,13 +64,14 @@
     pulseaudio
     pamixer
 
-
+    # Gaming
     steam
+    lutris
+
     # GPU stuff 
     amdvlk
 
     # Screenshotting
-    scrot
     grim
     slurp
 
@@ -101,7 +92,6 @@
   fonts.packages = with pkgs; [
   # Bitmap
     cozette 
-    # tewi-font #small
     gohufont 
   # Standard
     jetbrains-mono
