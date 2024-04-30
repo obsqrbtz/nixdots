@@ -41,7 +41,6 @@
     swww
     openssl
     vim
-    lxqt.lxqt-policykit
     libnotify
     neofetch
     onefetch
@@ -65,6 +64,7 @@
     hyprland
     seatd
     xdg-desktop-portal-hyprland
+    xdg-desktop-portal-gtk
     waybar
     libsForQt5.qt5.qtwayland
     qt6.qtwayland

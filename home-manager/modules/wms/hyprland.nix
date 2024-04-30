@@ -111,15 +111,16 @@
         disable_hyprland_logo = true;
       };
 
-      windowrule = [
-        "float, ^(lxqt-policykit-agent)$"
-      ];
       windowrulev2 = [
         "stayfocused, title:^(),class:^(steam)"
         "minsize 1 1 , title:^(),class:^(steam)"
+        "dimaround, class:^(xdg-desktop-portal-gtk)$"
+        "dimaround, class:^(polkit-gnome-authentication-agent-1)$"
       ];
-
+      # Make sure that your portals launch after this gets executed. For some people, they might launch before that has happened.
+      # https://wiki.hyprland.org/FAQ/
       exec-once = [
+        "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "swww init"
         "swww img ~/Pictures/walls/lorna-shore.png"
         "hyprctl setcursor Bibata-Modern-Ice 24"
@@ -127,7 +128,6 @@
         "waybar"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
-        "lxqt-policykit-agent"
         "mako"
         "udiskie"
       ];
