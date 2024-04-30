@@ -26,6 +26,7 @@
     lsd
     fzf
     btop
+    tgpt
     dfc
     tree
     wget
