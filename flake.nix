@@ -43,7 +43,10 @@
       homeConfigurations.dan = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
         extraSpecialArgs = { inherit inputs; };
-        modules = [ ./home-manager/home.nix ];
+        modules = [ 
+          ./spicetify.nix
+          ./home-manager/home.nix 
+        ];
       };
   };
 }

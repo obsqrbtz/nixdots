@@ -2,6 +2,7 @@
 {
   imports = [
     inputs.nix-colors.homeManagerModules.default
+    inputs.spicetify-nix.homeManagerModule
     ./modules/bundle.nix
   ];
 
