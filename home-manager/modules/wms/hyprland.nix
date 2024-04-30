@@ -226,9 +226,10 @@
         "1,defaultName:term"
         "2,defaultName:code"
         "3,defaultName:web"
-        "4,defaultName:discord"
-        "5,defaultName:telegram"
-        "6,defaultName:misc"
+        "4,defaultName:telegram"
+        "5,defaultName:steam"
+        "6,defaultName:discord"
+        "7,defaultName:misc"
       ];
 
     };

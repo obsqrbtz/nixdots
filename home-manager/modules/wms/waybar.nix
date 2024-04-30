@@ -73,7 +73,7 @@
 * {
     border: none;
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: JetBrains Mono;
+    font-family: GohuFont;
     font-size: 14px;
     /*font-weight: bold; */
     min-height: 20px;
