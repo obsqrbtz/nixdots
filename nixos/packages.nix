@@ -44,6 +44,9 @@
     libnotify
     neofetch
     onefetch
+    nh
+    nix-output-monitor
+    nvd
    
     # Wayland stuff
     xwayland
