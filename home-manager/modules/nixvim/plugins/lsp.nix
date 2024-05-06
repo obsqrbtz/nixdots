@@ -3,11 +3,13 @@
 
     treesitter = {
       enable = true;
+      nixGrammars = true;
       nixvimInjections = true;
       folding = false;
       indent = true;
     };
-
+    treesitter-context.enable = true;
+    rainbow-delimiters.enable = true;
     treesitter-refactor = {
       enable = true;
       highlightDefinitions = {
@@ -32,6 +34,17 @@
         };
         csharp-ls.enable = true;
       };
+      keymaps.lspBuf = {
+        "gd" = "definition";
+        "gD" = "references";
+        "gt" = "type_definition";
+        "gi" = "implementation";
+        "K" = "hover";
+      };
+    };
+    lsp-lines = {
+      enable = true;
+      currentLine = true;
     };
   };
 }

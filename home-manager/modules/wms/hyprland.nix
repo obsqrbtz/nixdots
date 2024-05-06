@@ -103,7 +103,7 @@
       misc = {
         vfr = 1;
         vrr = 1;
-        focus_on_activate = true;
+        focus_on_activate = false;
         animate_manual_resizes = true;
         animate_mouse_windowdragging = true;
         enable_swallow = true;
