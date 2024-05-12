@@ -3,7 +3,7 @@
   services.mako = {
     enable = true;
     layer = "overlay";
-    font = "GohuFont";
+    font = "Mononoki Nerd Font";
     width = 300;
     height = 140;
     defaultTimeout = 4000;

@@ -15,7 +15,7 @@
 
   gtk = {
     enable = true;
-    font.name = "JetBrains Mono 10";
+    font.name = "Mononoki Nerd Font 12";
     theme = {
       name = "Gruvbox-Dark-BL-LB";
       package = pkgs.gruvbox-gtk-theme;

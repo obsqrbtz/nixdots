@@ -99,12 +99,13 @@
     gohufont 
   # Standard
     jetbrains-mono
+    mononoki
     noto-fonts
     noto-fonts-emoji
     twemoji-color-font
     font-awesome
     powerline-fonts
     powerline-symbols
-    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    (nerdfonts.override { fonts = [ "JetBrainsMono" "Mononoki" ]; })
   ];
 }

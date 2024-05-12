@@ -14,11 +14,11 @@
         size = 14.0;
         #draw_bold_text_with_bright_colors = false;
         normal = {
-          family = "GohuFont";
+          family = "Mononoki Nerd Font";
         };
         bold = {
-          family = "GohuFont";
-          style = "Regular";
+          family = "Mononoki Nerd Font";
+          style = "Bold";
         };
       };
 
