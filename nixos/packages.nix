@@ -9,14 +9,12 @@
     telegram-desktop
     alacritty
     wofi
-    discord
     
     # Coding stuff
     gnumake
     gcc
     nodejs
     vscode
-    python
 
     # CLI utils
     file
