@@ -1,6 +1,5 @@
 {
   imports = [
-    ./sound.nix
     ./env.nix
     ./user.nix
     ./docker.nix
