@@ -1,7 +1,6 @@
 { pkgs, ... }: {
   nixpkgs.config = {
     allowUnfree = true;
-    permittedInsecurePackages = ["python-2.7.18.7" "python-2.7.18.8" "electron-25.9.0"];
   };
 
   environment.systemPackages = with pkgs; [
@@ -17,9 +16,7 @@
     gcc
     nodejs
     vscode
-    jetbrains.rider
     python
-    (python3.withPackages (ps: with ps; [ requests ]))
 
     # CLI utils
     file
