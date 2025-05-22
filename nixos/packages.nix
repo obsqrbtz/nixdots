@@ -15,6 +15,7 @@
     gcc
     nodejs
     vscode
+    neovim
 
     # CLI utils
     file

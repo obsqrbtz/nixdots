@@ -2,7 +2,6 @@
 {
   imports = [
     inputs.nix-colors.homeManagerModules.default
-    inputs.nixvim.homeManagerModules.nixvim
     ./modules/bundle.nix
   ];
 

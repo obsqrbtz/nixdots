@@ -41,7 +41,7 @@
     LC_TIME = "ru_RU.UTF-8";
   };
 
-  hardware.opengl.driSupport32Bit = true;
+  hardware.graphics.enable32Bit = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
