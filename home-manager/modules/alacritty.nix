@@ -10,17 +10,6 @@
           y = 10;
         };
       };
-      font = {
-        size = 14.0;
-        #draw_bold_text_with_bright_colors = false;
-        normal = {
-          family = "Mononoki Nerd Font";
-        };
-        bold = {
-          family = "Mononoki Nerd Font";
-          style = "Bold";
-        };
-      };
 
       colors = {
         primary = {

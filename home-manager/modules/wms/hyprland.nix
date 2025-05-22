@@ -48,7 +48,6 @@
 
         layout = "dwindle";
 
-        no_cursor_warps = false;
       };
 
       decoration = {
@@ -61,10 +60,6 @@
           new_optimizations = true;
         };
 
-        drop_shadow = true;
-        shadow_range = 4;
-        shadow_render_power = 3;
-        "col.shadow" = "rgba(1a1a1aee)";
       };
 
       animations = {
@@ -86,10 +81,6 @@
       dwindle = {
         pseudotile = true; # master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
         preserve_split = true; # you probably want this
-      };
-
-      master = {
-        new_is_master = true;
       };
 
       gestures = {
