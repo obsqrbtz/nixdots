@@ -73,7 +73,7 @@
 * {
     border: none;
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: Mononoki Nerd Font;
+    font-family: SauceCodePro Nerd Font Mono;
     font-size: 14px;
     /*font-weight: bold; */
     min-height: 20px;
