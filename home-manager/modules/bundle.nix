@@ -8,5 +8,6 @@
     ./nix-colors.nix
     ./wms/hyprland.nix
     ./wms/waybar.nix
+    ./wofi.nix
   ];
 }
