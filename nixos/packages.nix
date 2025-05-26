@@ -16,6 +16,7 @@
     nodejs
     vscode
     neovim
+	python3
 
     # CLI utils
     file
@@ -96,6 +97,7 @@
   # Standard
     jetbrains-mono
     mononoki
+    nerd-fonts.sauce-code-pro
     noto-fonts
     noto-fonts-emoji
     twemoji-color-font

@@ -6,6 +6,7 @@
     ./nm.nix
     ./hyprland.nix
     ./steam.nix
+    ./wireguard.nix
     #./trim.nix
     #./bluetooth.nix
   ];

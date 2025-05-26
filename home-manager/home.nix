@@ -5,13 +5,6 @@
     ./modules/bundle.nix
   ];
 
-  # colorScheme = inputs.nix-colors.lib.schemeFromYAML "palette" 
-  #   (builtins.readFile
-  #     (builtins.fetchurl({
-  #       url = "https://raw.githubusercontent.com/metalelf0/base16-black-metal-scheme/master/black-metal.yaml";
-  #       sha256 = "sha256:0fba5l8yx9lxppqn7gcdc371c4rdc27iyfk56vfjzxpgs40qr439";
-  #     })));
-
   gtk = {
     enable = true;
     font.name = "Mononoki Nerd Font 12";

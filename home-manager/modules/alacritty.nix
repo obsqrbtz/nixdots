@@ -10,7 +10,17 @@
           y = 10;
         };
       };
-
+      font = {
+        size = 12.0;
+        #draw_bold_text_with_bright_colors = false;
+        normal = {
+          family = "SauceCodePro Nerd Font Mono";
+        };
+        bold = {
+          family = "SauceCodePro Nerd Font Mono";
+          style = "Bold";
+        };
+      };
       colors = {
         primary = {
           foreground = "#${config.colorScheme.palette.base07}";
