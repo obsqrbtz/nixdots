@@ -21,6 +21,8 @@
     # CLI utils
     file
     lsd
+    fd
+    ripgrep
     fzf
     btop
     tgpt
