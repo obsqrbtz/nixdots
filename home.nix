@@ -68,8 +68,16 @@
   programs.git = {
     enable = true;
     settings = {
-    	user.name = "Daniel Dada";
-	user.email = "doesdeos@gmail.com";
+	user = {
+    	   name = "Daniel Dada";
+	   email = "doesdeos@gmail.com";
+	   signingkey = "~/.ssh/id_ed25519.pub";
+	};
+	commit.gpgsign = true;
+	gpg.format = "ssh";
+	credential.helper = "store";
+	core.autocrlf = "input";
+	url."git@github.com:".insteadOf = "https://github.com/";
 	init.defaultBranch = "master";
 	pull.rebase = false;
     };
