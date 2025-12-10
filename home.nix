@@ -14,7 +14,6 @@
     nodePackages.typescript-language-server
     
     rustup
-    rust-analyzer
     
     go
     gopls
@@ -44,7 +43,7 @@
       share = true;
     };
 
-    initExtra = ''
+    initContent = ''
       bindkey '^R' history-incremental-search-backward
       bindkey '^[[A' history-search-backward
       bindkey '^[[B' history-search-forward
@@ -67,11 +66,12 @@
 
   programs.git = {
     enable = true;
-    userName = "Daniel Dada";
-    userEmail = "doesdeos@gmail.com";
-    extraConfig = {
-      init.defaultBranch = "master";
-      pull.rebase = false;
+    settings = {
+    	userName = "Daniel Dada";
+	userEmail = "doesdeos@gmail.com";
+	init.defaultBranch = "master";
+	pull.rebase = false;
+    }
     };
   };
 
