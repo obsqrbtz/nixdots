@@ -1,5 +1,7 @@
 # Nixdots
 
+Personal configuration boilerplate
+
 ## Setup
 
 ### Generate hardware configuration
