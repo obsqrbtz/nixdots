@@ -32,6 +32,11 @@
     fzf
   ];
 
+  home.file.".config/zsh/custom.zsh" = {
+    source = ../config/zsh/custom.zsh;
+    executable = true;
+  };
+
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -47,16 +52,7 @@
     };
 
     initContent = ''
-      bindkey '^R' history-incremental-search-backward
-      bindkey '^[[A' history-search-backward
-      bindkey '^[[B' history-search-forward
-
-      setopt AUTO_CD
-
-      setopt COMPLETE_IN_WORD
-      setopt ALWAYS_TO_END
-
-      PS1='%F{cyan}%n@%m%f:%F{blue}%~%f$ '
+      source ${config.home.homeDirectory}/.config/zsh/custom.zsh
     '';
 
     shellAliases = {
