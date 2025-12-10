@@ -45,15 +45,19 @@
     git
     wget
     curl
-    htop
+    btop
     tree
     unzip
     ripgrep
     fd
-    
+
     gcc
     gnumake
     pkg-config
+
+    nerd-fonts.commit-mono
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.caskaydia-mono
   ];
 
   users.users.dan = {

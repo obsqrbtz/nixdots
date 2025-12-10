@@ -4,6 +4,8 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules/common.nix
+    ../../modules/session/gnome.nix
+    ../../modules/session/i3.nix
   ];
 
   networking.hostName = "nixos-vm";
@@ -12,10 +14,6 @@
   boot.loader.grub.device = "/dev/sda";
   boot.loader.grub.useOSProber = true;
   boot.loader.grub.configurationLimit = 3;
-
-  services.xserver.enable = true;
-  services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
 
   services.xserver.xkb = {
     layout = "us";

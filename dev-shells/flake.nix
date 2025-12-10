@@ -20,39 +20,19 @@
         };
 
         rust = pkgs.mkShell {
-          buildInputs = with pkgs; [
-            rustc
-            cargo
-            rustfmt
-            clippy
-            rust-analyzer
-          ];
+          buildInputs = with pkgs; [ rustc cargo rustfmt clippy rust-analyzer ];
         };
 
         go = pkgs.mkShell {
-          buildInputs = with pkgs; [
-            go
-            gopls
-            gotools
-            go-tools
-          ];
+          buildInputs = with pkgs; [ go gopls gotools go-tools ];
         };
 
         cpp = pkgs.mkShell {
-          buildInputs = with pkgs; [
-            gcc
-            clang-tools
-            cmake
-            gnumake
-            gdb
-          ];
+          buildInputs = with pkgs; [ gcc clang-tools cmake gnumake gdb ];
         };
 
         csharp = pkgs.mkShell {
-          buildInputs = with pkgs; [
-            dotnet-sdk_10
-            omnisharp-roslyn
-          ];
+          buildInputs = with pkgs; [ dotnet-sdk_10 omnisharp-roslyn ];
         };
       };
     };
