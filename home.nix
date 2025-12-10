@@ -98,67 +98,6 @@
     nix-direnv.enable = true;
   };
 
-  home.file.".config/dev-shells/js.nix".text = ''
-    { pkgs ? import <nixpkgs> {} }:
-    pkgs.mkShell {
-      buildInputs = with pkgs; [
-        nodejs_22
-        nodePackages.pnpm
-        nodePackages.typescript
-        nodePackages.typescript-language-server
-        nodePackages.vscode-langservers-extracted
-      ];
-    }
-  '';
-
-  home.file.".config/dev-shells/rust.nix".text = ''
-    { pkgs ? import <nixpkgs> {} }:
-    pkgs.mkShell {
-      buildInputs = with pkgs; [
-        rustc
-        cargo
-        rustfmt
-        clippy
-        rust-analyzer
-      ];
-    }
-  '';
-
-  home.file.".config/dev-shells/go.nix".text = ''
-    { pkgs ? import <nixpkgs> {} }:
-    pkgs.mkShell {
-      buildInputs = with pkgs; [
-        go
-        gopls
-        gotools
-        go-tools
-      ];
-    }
-  '';
-
-  home.file.".config/dev-shells/cpp.nix".text = ''
-    { pkgs ? import <nixpkgs> {} }:
-    pkgs.mkShell {
-      buildInputs = with pkgs; [
-        gcc
-        clang-tools
-        cmake
-        gnumake
-        gdb
-      ];
-    }
-  '';
-
-  home.file.".config/dev-shells/csharp.nix".text = ''
-    { pkgs ? import <nixpkgs> {} }:
-    pkgs.mkShell {
-      buildInputs = with pkgs; [
-        dotnet-sdk_10
-        omnisharp-roslyn
-      ];
-    }
-  '';
-
   home.sessionVariables = {
     EDITOR = "nvim";
     VISUAL = "nvim";
