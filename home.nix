@@ -7,10 +7,162 @@
 
   home.packages = with pkgs; [
     inputs.clrsync.packages.x86_64-linux.clrsync
+    
+    nodejs_22
+    nodePackages.pnpm
+    nodePackages.typescript
+    nodePackages.typescript-language-server
+    
+    rustup
+    rust-analyzer
+    
+    go
+    gopls
+    
+    dotnet-sdk_10
+    
+    clang-tools
+    cmake
+    
+    lazygit
+    eza
+    bat
+    fzf
   ];
 
-  home.sessionVariables = {
+  programs.home-manager.enable = true;
+
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
+    
+    history = {
+      size = 10000;
+      path = "${config.xdg.dataHome}/zsh/history";
+      save = 10000;
+      extended = true;
+      share = true;
+    };
+
+    initExtra = ''
+      bindkey '^R' history-incremental-search-backward
+      bindkey '^[[A' history-search-backward
+      bindkey '^[[B' history-search-forward
+      
+      setopt AUTO_CD
+      
+      setopt COMPLETE_IN_WORD
+      setopt ALWAYS_TO_END
+      
+      PS1='%F{cyan}%n@%m%f:%F{blue}%~%f$ '
+    '';
+
+    shellAliases = {
+      ls = "eza";
+      cat = "bat";
+      nix-rebuild = "sudo nixos-rebuild switch --flake .#";
+      home-rebuild = "home-manager switch --flake .#dan";
+    };
   };
 
-  programs.home-manager.enable = true;
+  programs.git = {
+    enable = true;
+    userName = "Daniel Dada";
+    userEmail = "doesdeos@gmail.com";
+    extraConfig = {
+      init.defaultBranch = "master";
+      pull.rebase = false;
+    };
+  };
+
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+    viAlias = true;
+    vimAlias = true;
+  };
+
+  home.file.".config/nvim" = {
+    source = pkgs.fetchFromGitHub {
+      owner = "obsqrbtz";
+      repo = "basedgoose.nvim";
+      rev = "master";
+      sha256 = "sha256-10za9srvkkxhiwrnpgnngkl6xsqvbbnpv1vkzj1fhwp7kzj6vq2a"; # Run nix-prefetch-url to get this
+    };
+    recursive = true;
+  };
+
+  programs.direnv = {
+    enable = true;
+    enableZshIntegration = true;
+    nix-direnv.enable = true;
+  };
+
+  home.file.".config/dev-shells/js.nix".text = ''
+    { pkgs ? import <nixpkgs> {} }:
+    pkgs.mkShell {
+      buildInputs = with pkgs; [
+        nodejs_22
+        nodePackages.pnpm
+        nodePackages.typescript
+        nodePackages.typescript-language-server
+        nodePackages.vscode-langservers-extracted
+      ];
+    }
+  '';
+
+  home.file.".config/dev-shells/rust.nix".text = ''
+    { pkgs ? import <nixpkgs> {} }:
+    pkgs.mkShell {
+      buildInputs = with pkgs; [
+        rustc
+        cargo
+        rustfmt
+        clippy
+        rust-analyzer
+      ];
+    }
+  '';
+
+  home.file.".config/dev-shells/go.nix".text = ''
+    { pkgs ? import <nixpkgs> {} }:
+    pkgs.mkShell {
+      buildInputs = with pkgs; [
+        go
+        gopls
+        gotools
+        go-tools
+      ];
+    }
+  '';
+
+  home.file.".config/dev-shells/cpp.nix".text = ''
+    { pkgs ? import <nixpkgs> {} }:
+    pkgs.mkShell {
+      buildInputs = with pkgs; [
+        gcc
+        clang-tools
+        cmake
+        gnumake
+        gdb
+      ];
+    }
+  '';
+
+  home.file.".config/dev-shells/csharp.nix".text = ''
+    { pkgs ? import <nixpkgs> {} }:
+    pkgs.mkShell {
+      buildInputs = with pkgs; [
+        dotnet-sdk_10
+        omnisharp-roslyn
+      ];
+    }
+  '';
+
+  home.sessionVariables = {
+    EDITOR = "nvim";
+    VISUAL = "nvim";
+  };
 }
