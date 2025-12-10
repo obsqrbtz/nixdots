@@ -30,8 +30,6 @@
     fzf
   ];
 
-  programs.home-manager.enable = true;
-
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -89,7 +87,7 @@
       owner = "obsqrbtz";
       repo = "basedgoose.nvim";
       rev = "master";
-      sha256 = "sha256-10za9srvkkxhiwrnpgnngkl6xsqvbbnpv1vkzj1fhwp7kzj6vq2a"; # Run nix-prefetch-url to get this
+      sha256 = "10za9srvkkxhiwrnpgnngkl6xsqvbbnpv1vkzj1fhwp7kzj6vq2a"; # Run nix-prefetch-url to get this
     };
     recursive = true;
   };
