@@ -60,7 +60,7 @@
     shellAliases = {
       ls = "eza";
       cat = "bat";
-      nix-rebuild = "sudo nixos-rebuild switch --flake .#";
+      nix-rebuild = "sudo nixos-rebuild switch --flake .";
       home-rebuild = "home-manager switch --flake .#dan";
     };
   };
