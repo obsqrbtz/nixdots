@@ -21,11 +21,6 @@ Desktop:
 sudo nixos-rebuild switch --flake .#nixos-desktop
 ```
 
-To rebuild home configuration separately:
-```bash
-home-manager switch --flake .#dan
-```
-
 ## Development Environments
 
 Create a `.envrc` file in the project root:
