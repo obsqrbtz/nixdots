@@ -19,6 +19,7 @@
     gopls
     
     dotnet-sdk_10
+    python3
     
     clang-tools
     cmake
@@ -67,11 +68,10 @@
   programs.git = {
     enable = true;
     settings = {
-    	userName = "Daniel Dada";
-	userEmail = "doesdeos@gmail.com";
+    	user.name = "Daniel Dada";
+	user.email = "doesdeos@gmail.com";
 	init.defaultBranch = "master";
 	pull.rebase = false;
-    }
     };
   };
 
