@@ -10,6 +10,7 @@
       terminal = "alacritty";
       startup = [
         { command = "${pkgs.polybar}/bin/polybar"; }
+        { command = "${pkgs.feh}/bin/feh --bg-scale ~/nixdots/img/wall.jpg"; }
         { command = "xrandr --output Virtual-1 --mode 1920x1080"; }
       ];
       bars = [ ];
@@ -67,10 +68,50 @@
         "Mod4+Button1" = "move";
         "Mod4+Button3" = "resize";
       };
+      window = {
+        border = 2;
+        titlebar = false;
+      };
 
       gaps = {
         inner = 10;
-        outer = 5;
+        top = 30;
+      };
+
+      colors = {
+        focused = {
+          border = "#88c0d0";
+          background = "#88c0d0";
+          text = "#2e3440";
+          indicator = "#88c0d0";
+          childBorder = "#88c0d0";
+        };
+
+        focusedInactive = {
+          border = "#4c566a";
+          background = "#3b4252";
+          text = "#d8dee9";
+          indicator = "#3b4252";
+          childBorder = "#3b4252";
+        };
+
+        unfocused = {
+          border = "#4c566a";
+          background = "#3b4252";
+          text = "#d8dee9";
+          indicator = "#3b4252";
+          childBorder = "#3b4252";
+        };
+
+        urgent = {
+          border = "#bf616a";
+          background = "#bf616a";
+          text = "#eceff4";
+          indicator = "#bf616a";
+          childBorder = "#bf616a";
+        };
+
+        background = "#2e3440";
       };
     };
   };

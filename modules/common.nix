@@ -58,6 +58,7 @@
     nerd-fonts.commit-mono
     nerd-fonts.jetbrains-mono
     nerd-fonts.caskaydia-mono
+    font-awesome
   ];
 
   users.users.dan = {
