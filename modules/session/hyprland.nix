@@ -6,23 +6,45 @@
     xwayland.enable = true;
   };
 
-  services.xserver.enable = true;
-  services.displayManager.gdm.enable = true;
-
-  environment.systemPackages = with pkgs; [
-    kitty
-    rofi
-    waybar
-    dunst
-    swaybg
-    grim
-    slurp
-    wl-clipboard
-    xdg-desktop-portal-hyprland
-  ];
-
   xdg.portal = {
     enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    extraPortals =
+      [ pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-hyprland ];
+    config.common.default = "*";
+  };
+
+  security.polkit.enable = true;
+
+  programs.dconf.enable = true;
+
+  environment.systemPackages = with pkgs; [
+    wl-clipboard
+    wlr-randr
+
+    xdg-desktop-portal-gtk
+    xdg-desktop-portal-hyprland
+
+    polkit_gnome
+
+    libnotify
+    glib # for gsettings
+
+    gvfs
+    xfce.tumbler # thumbnails
+  ];
+
+  systemd.user.services.polkit-gnome-authentication-agent-1 = {
+    description = "polkit-gnome-authentication-agent-1";
+    wantedBy = [ "graphical-session.target" ];
+    wants = [ "graphical-session.target" ];
+    after = [ "graphical-session.target" ];
+    serviceConfig = {
+      Type = "simple";
+      ExecStart =
+        "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
+      Restart = "on-failure";
+      RestartSec = 1;
+      TimeoutStopSec = 10;
+    };
   };
 }
