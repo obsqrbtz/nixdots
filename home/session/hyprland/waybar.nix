@@ -14,7 +14,8 @@
 
         modules-left = [ "hyprland/workspaces" "hyprland/window" ];
         modules-center = [ "clock" ];
-        modules-right = [ "pulseaudio" "network" "cpu" "memory" "battery" "tray" ];
+        modules-right =
+          [ "pulseaudio" "network" "cpu" "memory" "battery" "tray" ];
 
         "hyprland/workspaces" = {
           format = "{icon}";
@@ -110,6 +111,6 @@
       };
     };
 
-    style = builtins.readFile ../../config/waybar/style.css;
+    style = builtins.readFile ../../../config/waybar/style.css;
   };
 }
