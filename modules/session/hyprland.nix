@@ -17,6 +17,7 @@
     swaybg
     grim
     slurp
+    wl-clipboard
     xdg-desktop-portal-hyprland
   ];
 

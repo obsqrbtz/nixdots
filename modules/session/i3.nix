@@ -20,5 +20,6 @@
     feh
     scrot
     dunst
+    xclip
   ];
 }

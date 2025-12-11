@@ -56,8 +56,8 @@
     '';
 
     shellAliases = {
-      ls = "eza";
-      cat = "bat";
+      ls = "eza --icons";
+      cat = "bat -P";
       nix-rebuild = "sudo nixos-rebuild switch --flake .";
       home-rebuild = "home-manager switch --flake .";
     };
@@ -92,9 +92,9 @@
     source = pkgs.fetchFromGitHub {
       owner = "obsqrbtz";
       repo = "basedgoose.nvim";
-      rev = "2cda4ba5c10b833ca1621f04bc02310e178a1269";
+      rev = "cda3b89fb7d06b44e11ab2dd198d943a524e949d";
       sha256 =
-        "C1XK3rUoMP9bW70uefWyl4/VGuU1NisQ+HBkqgrMLXE="; # Run nix-prefetch-url to get this
+        "a17ObwoR2qbXCtFIiMesB94a15f1fdGhDle9UnxSlWg="; # nix-prefetch-git https://github.com/obsqrbtz/basedgoose.nvim --rev <commit>
     };
     recursive = true;
   };

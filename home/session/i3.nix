@@ -8,13 +8,26 @@
       modifier = "Mod4";
 
       terminal = "alacritty";
-      startup = [
-        { command = "${pkgs.polybar}/bin/polybar"; }
-        { command = "${pkgs.feh}/bin/feh --bg-scale ~/nixdots/img/wall.jpg"; }
-        { command = "xrandr --output Virtual-1 --mode 1920x1080"; }
-      ];
+      startup = [{
+        command =
+          "sh -c 'xrandr --output Virtual-1 --mode 1920x1080 && sleep 0.1 && feh --bg-scale ~/nixdots/img/wall.jpg'";
+        notification = false;
+      }];
+      defaultWorkspace = "workspace 1";
       bars = [ ];
-      keybindings = let mod = "Mod4";
+      keybindings = let
+        mod = "Mod4";
+        workspace = {
+          term = "term";
+          code = "code";
+          web = "web";
+          ws4 = "ws4";
+          ws5 = "ws5";
+          ws6 = "ws6";
+          ws7 = "ws7";
+          ws8 = "ws8";
+          ws9 = "ws9";
+        };
       in {
         # Terminal
         "${mod}+Return" = "exec alacritty";
@@ -35,26 +48,27 @@
         "${mod}+Up" = "focus up";
         "${mod}+Down" = "focus down";
 
-        "${mod}+1" = "workspace 1";
-        "${mod}+Shift+1" = "move container to workspace 1";
-        "${mod}+2" = "workspace 2";
-        "${mod}+Shift+2" = "move container to workspace 2";
-        "${mod}+3" = "workspace 3";
-        "${mod}+Shift+3" = "move container to workspace 3";
-        "${mod}+4" = "workspace 4";
-        "${mod}+Shift+4" = "move container to workspace 4";
-        "${mod}+5" = "workspace 5";
-        "${mod}+Shift+5" = "move container to workspace 5";
-        "${mod}+6" = "workspace 6";
-        "${mod}+Shift+6" = "move container to workspace 6";
-        "${mod}+7" = "workspace 7";
-        "${mod}+Shift+7" = "move container to workspace 7";
-        "${mod}+8" = "workspace 8";
-        "${mod}+Shift+8" = "move container to workspace 8";
-        "${mod}+9" = "workspace 9";
-        "${mod}+Shift+9" = "move container to workspace 9";
-        "${mod}+0" = "workspace 10";
-        "${mod}+Shift+0" = "move container to workspace 10";
+        # --- Workspace switching ---
+        "${mod}+1" = "workspace ${workspace.term}";
+        "${mod}+2" = "workspace ${workspace.code}";
+        "${mod}+3" = "workspace ${workspace.web}";
+        "${mod}+4" = "workspace ${workspace.ws4}";
+        "${mod}+5" = "workspace ${workspace.ws5}";
+        "${mod}+6" = "workspace ${workspace.ws6}";
+        "${mod}+7" = "workspace ${workspace.ws7}";
+        "${mod}+8" = "workspace ${workspace.ws8}";
+        "${mod}+9" = "workspace ${workspace.ws9}";
+
+        # --- Move container to workspace ---
+        "${mod}+Shift+1" = "move container to ${workspace.term}";
+        "${mod}+Shift+2" = "move container to ${workspace.code}";
+        "${mod}+Shift+3" = "move container to ${workspace.web}";
+        "${mod}+Shift+4" = "move container to ${workspace.ws4}";
+        "${mod}+Shift+5" = "move container to ${workspace.ws5}";
+        "${mod}+Shift+6" = "move container to ${workspace.ws6}";
+        "${mod}+Shift+7" = "move container to ${workspace.ws7}";
+        "${mod}+Shift+8" = "move container to ${workspace.ws8}";
+        "${mod}+Shift+9" = "move container to ${workspace.ws9}";
 
         # Scratchpad / special workspace
         "${mod}+o" = "scratchpad show"; # toggle scratchpad
@@ -116,8 +130,22 @@
     };
   };
 
+  home.pointerCursor = {
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Ice";
+    size = 24;
+    x11.enable = true;
+    gtk.enable = true;
+  };
+
   home.file.".config/polybar/config.ini".source =
     ../../config/polybar/config.ini;
+
+  services.polybar = {
+    enable = true;
+    script = "pkill -USR1 polybar || true && polybar &";
+
+  };
 
   services.picom = {
     enable = true;

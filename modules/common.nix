@@ -51,9 +51,14 @@
     ripgrep
     fd
 
+    nix-prefetch-git
+    home-manager
+
     gcc
     gnumake
     pkg-config
+
+    bibata-cursors
 
     nerd-fonts.commit-mono
     nerd-fonts.jetbrains-mono
