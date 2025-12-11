@@ -60,6 +60,7 @@
       cat = "bat -P";
       nix-rebuild = "sudo nixos-rebuild switch --flake .";
       home-rebuild = "home-manager switch --flake .";
+      nvim-basedgoose = "NVIM_APPNAME=basedgoose nvim";
     };
   };
 
@@ -92,9 +93,9 @@
     source = pkgs.fetchFromGitHub {
       owner = "obsqrbtz";
       repo = "basedgoose.nvim";
-      rev = "cda3b89fb7d06b44e11ab2dd198d943a524e949d";
+      rev = "923bb9d5f685e7d8450426a3a132b8d7d43059f2";
       sha256 =
-        "a17ObwoR2qbXCtFIiMesB94a15f1fdGhDle9UnxSlWg="; # nix-prefetch-git https://github.com/obsqrbtz/basedgoose.nvim --rev <commit>
+        "INOG+wOflldGtrf1aydQc9UfP8vW0O5mvkfjNEOB0wo="; # nix-prefetch-git https://github.com/obsqrbtz/basedgoose.nvim --rev <commit>
     };
     recursive = true;
   };

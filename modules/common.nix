@@ -51,12 +51,16 @@
     ripgrep
     fd
 
+    bitwarden-desktop
+
     nix-prefetch-git
     home-manager
 
     gcc
     gnumake
     pkg-config
+    vscode
+    nixfmt
 
     bibata-cursors
 
@@ -64,6 +68,8 @@
     nerd-fonts.jetbrains-mono
     nerd-fonts.caskaydia-mono
     font-awesome
+
+    google-chrome
   ];
 
   users.users.dan = {
