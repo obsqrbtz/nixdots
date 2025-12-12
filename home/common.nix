@@ -1,4 +1,9 @@
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
   home.username = "dan";
@@ -93,9 +98,8 @@
     source = pkgs.fetchFromGitHub {
       owner = "obsqrbtz";
       repo = "basedgoose.nvim";
-      rev = "923bb9d5f685e7d8450426a3a132b8d7d43059f2";
-      sha256 =
-        "INOG+wOflldGtrf1aydQc9UfP8vW0O5mvkfjNEOB0wo="; # nix-prefetch-git https://github.com/obsqrbtz/basedgoose.nvim --rev <commit>
+      rev = "460d2504c3e0019518113fc6b7e04a16d6edc1fd";
+      sha256 = "+CYRltrCK0ujqUbVdtzyb1WDjJESgMXQhGJ1TMSc3CI="; # nix-prefetch-git https://github.com/obsqrbtz/basedgoose.nvim --rev <commit>
     };
     recursive = true;
   };
