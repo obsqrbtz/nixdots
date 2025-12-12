@@ -110,6 +110,27 @@
     recursive = true;
   };
 
+  programs.clrsync = {
+    enable = true;
+    package = inputs.clrsync.packages.${pkgs.system}.default;
+
+    defaultTheme = "cursed";
+    palettesPath = "~/.config/clrsync/palettes";
+    font = "JetBrainsMono Nerd Font Mono";
+    fontSize = 14;
+
+    # Set to true to apply theme on activation
+    applyTheme = true;
+
+    templates = {
+      formats-demo = {
+        enabled = true;
+        inputPath = "~/.config/clrsync/templates/formats-demo";
+        outputPath = "~/.config/clrsync/formats-demo";
+      };
+    };
+  };
+
   programs.direnv = {
     enable = true;
     enableZshIntegration = true;
