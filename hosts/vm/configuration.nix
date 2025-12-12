@@ -5,7 +5,6 @@
     ./hardware-configuration.nix
     ../../modules/common.nix
     ../../modules/session/gnome.nix
-    ../../modules/session/i3.nix
   ];
 
   networking.hostName = "nixos-vm";

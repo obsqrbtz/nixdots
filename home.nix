@@ -6,7 +6,6 @@
 
     ./home/session/gnome.nix
     ./home/session/hyprland.nix
-    ./home/session/i3.nix
   ];
 
   gtk = {
