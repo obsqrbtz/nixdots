@@ -33,7 +33,7 @@ tooltip label {
 }
 
 #workspaces button {
-  padding: 4px 12px;
+  padding: 2px 6px;
   margin: 6px 3px;
   color: @on_surface_variant;
   background: transparent;
@@ -63,11 +63,11 @@ tooltip label {
 }
 
 #window {
-  padding: 6px 20px;
-  margin: 6px 12px;
-  color: @on_surface;
-  font-weight: 400;
-  background: transparent;
+  padding: 6px 14px;
+  margin: 6px 0px;
+  background: @surface;
+  border: 1px solid @border;
+  border-radius: 6px;
 }
 
 #clock,
@@ -100,7 +100,6 @@ tooltip label {
   color: @on_background;
   font-weight: 600;
   padding: 6px 18px;
-  background: @surface_variant;
   border-color: @border_focused;
 }
 

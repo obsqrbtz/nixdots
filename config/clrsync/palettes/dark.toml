@@ -46,8 +46,8 @@ on_surface = '#E5E5E5'
 on_surface_varuant = '#A3A3A3'
 on_warning = '#0A0A0A'
 success = '#22C55E'
-surface = '#141414'
-surface_variant = '#1C1C1C'
+surface = '#111111'
+surface_variant = '#141414'
 warning = '#F59E0B'
 
 [general]
