@@ -12,6 +12,7 @@
       window_padding_width = 12;
       confirm_os_window_close = 0;
       enable_audio_bell = false;
+      hide_window_decorations = true;
 
       foreground = "#fafafa";
       background = "#0a0a0a";
@@ -20,6 +21,7 @@
 
       cursor = "#fafafa";
       cursor_text_color = "#0a0a0a";
+      cursor_trail = 1;
 
       url_color = "#3b82f6";
 
