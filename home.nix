@@ -8,7 +8,6 @@
 {
   imports = [
     ./home/common.nix
-    ./home/clrsync.nix
     ./home/session/gnome.nix
     ./home/session/hyprland.nix
   ];

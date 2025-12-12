@@ -12,7 +12,6 @@
 
   home.packages = with pkgs; [
     procps
-    inputs.clrsync.packages.x86_64-linux.clrsync
 
     nodejs_22
     nodePackages.pnpm
@@ -105,16 +104,14 @@
     source = pkgs.fetchFromGitHub {
       owner = "obsqrbtz";
       repo = "basedgoose.nvim";
-      rev = "bb2d6826d7f08bdd0521b2a6c1a8619874731157";
-      sha256 = "rtWmxejxG2jNxDuL88RjuEpUN39r1d5oHsE0w0hHTz4="; # nix-prefetch-git https://github.com/obsqrbtz/basedgoose.nvim --rev <commit>
+      rev = "1bbf671b46e5df3436ca97e023be6348c8b31443";
+      sha256 = "VWnk0I6JT/VNQg5WISGg/zkS/RKgxh7oAEySSnOQcsg="; # nix-prefetch-git https://github.com/obsqrbtz/basedgoose.nvim --rev <commit>
     };
     recursive = true;
   };
 
   programs.clrsync = {
     enable = true;
-    package = inputs.clrsync.packages.${pkgs.system}.default;
-
     defaultTheme = "dark";
     palettesPath = "~/nixdots/config/clrsync/palettes";
     font = "JetBrainsMono Nerd Font Mono";
@@ -139,6 +136,11 @@
         enabled = true;
         inputPath = "~/nixdots/config/clrsync/templates/rofi.rasi";
         outputPath = "~/.config/rofi/clrsync.rasi";
+      };
+      nvim = {
+        enabled = true;
+        inputPath = "~/nixdots/config/clrsync/templates/nvim.lua";
+        outputPath = "~/.config/nvim/colors/clrsync.lua";
       };
     };
   };

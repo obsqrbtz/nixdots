@@ -12,11 +12,18 @@
     clrsync.url = "github:obsqrbtz/clrsync";
   };
 
-  outputs = { self, nixpkgs, home-manager, clrsync, ... }@inputs:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      clrsync,
+      ...
+    }@inputs:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-      
+
       commonModules = [
         home-manager.nixosModules.home-manager
         {
@@ -28,7 +35,8 @@
           };
         }
       ];
-    in {
+    in
+    {
       nixosConfigurations = {
         nixos-vm = nixpkgs.lib.nixosSystem {
           inherit system;
@@ -50,7 +58,13 @@
       homeConfigurations.dan = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         extraSpecialArgs = { inherit inputs; };
-        modules = [ ./home.nix ];
+        modules = [
+          ./home.nix
+          clrsync.homeManagerModules.default
+          {
+            programs.clrsync.package = clrsync.packages.x86_64-linux.default;
+          }
+        ];
       };
     };
 }
