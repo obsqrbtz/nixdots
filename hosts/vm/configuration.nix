@@ -6,7 +6,6 @@
     ../../modules/common.nix
     ../../modules/session/gnome.nix
     ../../modules/session/i3.nix
-    ../../modules/session/hyprland.nix
   ];
 
   networking.hostName = "nixos-vm";
