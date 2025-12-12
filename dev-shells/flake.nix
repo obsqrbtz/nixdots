@@ -70,17 +70,19 @@
 
             pkg-config
           ];
-
           shellHook = ''
-                                    export CMAKE_GENERATOR="Ninja"
-                                    export CMAKE_EXPORT_COMPILE_COMMANDS=ON
-                                    echo "KaskadCPP development environment loaded"
-                                    echo "Compiler: $(gcc --version | head -n1)"
-                                    echo "CMake: $(cmake --version | head -n1)"
-                                    echo "Ninja: $(ninja --version)"
-                                    echo "Qt6: $(qmake6 -v | grep 'Qt version')"
-                                    echo "SWIG: $(swig -version | grep 'SWIG Version')"
-            			echo ".NET: $(dotnet --version)"
+            export CMAKE_GENERATOR="Ninja"
+            export CMAKE_EXPORT_COMPILE_COMMANDS=1
+            export CLANGD_FLAGS="--query-driver=${pkgs.gcc}/bin/gcc,${pkgs.gcc}/bin/g++"
+            export CPLUS_INCLUDE_PATH="${pkgs.gcc.cc}/include/c++/${pkgs.gcc.cc.version}:${pkgs.gcc.cc}/include/c++/${pkgs.gcc.cc.version}/x86_64-unknown-linux-gnu:$CPLUS_INCLUDE_PATH"
+            export C_INCLUDE_PATH="${pkgs.gcc.cc}/include:$C_INCLUDE_PATH"
+            echo "KaskadCPP development environment loaded"
+            echo "Compiler: $(gcc --version | head -n1)"
+            echo "CMake: $(cmake --version | head -n1)"
+            echo "Ninja: $(ninja --version)"
+            echo "Qt6: $(qmake6 -v | grep 'Qt version')"
+            echo "SWIG: $(swig -version | grep 'SWIG Version')"
+            echo ".NET: $(dotnet --version)"
           '';
         };
 

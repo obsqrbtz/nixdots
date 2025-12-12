@@ -16,11 +16,9 @@
     nodejs_22
     nodePackages.pnpm
     nodePackages.typescript
-    nodePackages.typescript-language-server
 
     rustc
     cargo
-    rust-analyzer
 
     go
     gopls
@@ -28,8 +26,16 @@
     dotnet-sdk_10
     python3
 
-    clang-tools
     cmake
+
+    clang-tools
+    pyright
+    rust-analyzer
+    nodePackages.typescript-language-server
+    lua-language-server
+    nil
+    stylua
+    nixfmt
 
     lazygit
     eza
@@ -98,8 +104,8 @@
     source = pkgs.fetchFromGitHub {
       owner = "obsqrbtz";
       repo = "basedgoose.nvim";
-      rev = "460d2504c3e0019518113fc6b7e04a16d6edc1fd";
-      sha256 = "+CYRltrCK0ujqUbVdtzyb1WDjJESgMXQhGJ1TMSc3CI="; # nix-prefetch-git https://github.com/obsqrbtz/basedgoose.nvim --rev <commit>
+      rev = "bb2d6826d7f08bdd0521b2a6c1a8619874731157";
+      sha256 = "rtWmxejxG2jNxDuL88RjuEpUN39r1d5oHsE0w0hHTz4="; # nix-prefetch-git https://github.com/obsqrbtz/basedgoose.nvim --rev <commit>
     };
     recursive = true;
   };

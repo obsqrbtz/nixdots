@@ -2,7 +2,10 @@
 
 {
   nix.settings = {
-    experimental-features = [ "nix-command" "flakes" ];
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
     auto-optimise-store = true;
   };
 
@@ -60,7 +63,6 @@
     gnumake
     pkg-config
     vscode
-    nixfmt
 
     bibata-cursors
 
@@ -75,7 +77,10 @@
   users.users.dan = {
     isNormalUser = true;
     description = "Dan";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     shell = pkgs.zsh;
   };
 
