@@ -1,4 +1,9 @@
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
   imports = [
@@ -11,12 +16,12 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Adwaita-dark"; # or "Adwaita" for light
-      package = pkgs.gnome-themes-extra;
+      name = "rose-pine";
+      package = pkgs.rose-pine-gtk-theme;
     };
     iconTheme = {
-      name = "Adwaita";
-      package = pkgs.adwaita-icon-theme;
+      name = "rose-pine";
+      package = pkgs.rose-pine-icon-theme;
     };
   };
 }

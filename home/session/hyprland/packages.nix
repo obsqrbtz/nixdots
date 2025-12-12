@@ -4,7 +4,7 @@
   qt = {
     enable = true;
     platformTheme.name = "gtk";
-    style.name = "adwaita-dark";
+    style.name = "rose-pine";
   };
 
   home.packages = with pkgs; [
