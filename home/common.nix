@@ -135,6 +135,11 @@
         outputPath = "~/.config/waybar/colors.css";
         reloadCmd = "${pkgs.procps}/bin/pkill -SIGUSR2 waybar";
       };
+      rofi = {
+        enabled = true;
+        inputPath = "~/nixdots/config/clrsync/templates/rofi.rasi";
+        outputPath = "~/.config/rofi/clrsync.rasi";
+      };
     };
   };
 

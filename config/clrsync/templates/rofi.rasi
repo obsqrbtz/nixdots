@@ -1,0 +1,109 @@
+* {
+    bg: {background};
+    bg-alt: {surface};
+    bg-selected: {surface_variant};
+    
+    fg: {foreground};
+    fg-alt: {on_surface};
+    
+    border: {border};
+    border-selected: {border_focused};
+    
+    accent: {accent};
+    
+    background-color: transparent;
+    text-color: @fg;
+    
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    location: center;
+    width: 640;
+    background-color: @bg;
+    border: 1px;
+    border-color: @border;
+    border-radius: 8px;
+}
+
+mainbox {
+    padding: 12px;
+}
+
+inputbar {
+    spacing: 8px;
+    padding: 12px 14px;
+    background-color: @bg-alt;
+    border: 1px;
+    border-color: @border;
+    border-radius: 6px;
+    children: [ prompt, entry ];
+}
+
+prompt {
+    text-color: @accent;
+}
+
+entry {
+    placeholder: "Search...";
+    placeholder-color: @fg-alt;
+}
+
+message {
+    margin: 12px 0 0;
+    border: 1px;
+    border-color: @border;
+    border-radius: 6px;
+    background-color: @bg-alt;
+}
+
+textbox {
+    padding: 12px 14px;
+}
+
+listview {
+    margin: 12px 0 0;
+    lines: 8;
+    columns: 1;
+    fixed-height: false;
+}
+
+element {
+    padding: 10px 12px;
+    spacing: 12px;
+    border-radius: 6px;
+}
+
+element normal.normal {
+    text-color: @fg-alt;
+}
+
+element normal.active {
+    text-color: @accent;
+}
+
+element selected.normal {
+    background-color: @bg-selected;
+    text-color: @fg;
+    border: 1px;
+    border-color: @border-selected;
+}
+
+element selected.active {
+    background-color: @bg-selected;
+    text-color: @accent;
+    border: 1px;
+    border-color: @border-selected;
+}
+
+element-icon {
+    size: 1.2em;
+    vertical-align: 0.5;
+}
+
+element-text {
+    text-color: inherit;
+    vertical-align: 0.5;
+}
