@@ -1,23 +1,4 @@
-@define-color bg-primary #0a0a0a;
-@define-color bg-secondary #141414;
-@define-color bg-tertiary #1a1a1a;
-@define-color bg-hover #202020;
-
-@define-color border-subtle #262626;
-@define-color border-default #333333;
-@define-color border-strong #404040;
-
-@define-color text-primary #fafafa;
-@define-color text-secondary #a3a3a3;
-@define-color text-muted #737373;
-
-@define-color accent-green #22c55e;
-@define-color accent-blue #3b82f6;
-@define-color accent-sky #0ea5e9;
-@define-color accent-purple #a855f7;
-@define-color accent-emerald #10b981;
-@define-color accent-amber #f59e0b;
-@define-color accent-red #ef4444;
+@import "./colors.css";
 
 * {
   border: none;
@@ -29,22 +10,22 @@
 }
 
 window#waybar {
-  background: @bg-primary;
-  color: @text-primary;
-  border-bottom: 1px solid @border-subtle;
+  background: @background;
+  color: @on_background;
+  border-bottom: 1px solid @border;
 }
 
 tooltip {
-  background: @bg-secondary;
-  color: @text-primary;
-  border: 1px solid @border-default;
+  background: @surface;
+  color: @on_surface;
+  border: 1px solid @border;
   border-radius: 8px;
   padding: 12px 16px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
 
 tooltip label {
-  color: @text-primary;
+  color: @on_surface;
 }
 
 #workspaces {
@@ -54,7 +35,7 @@ tooltip label {
 #workspaces button {
   padding: 4px 12px;
   margin: 6px 3px;
-  color: @text-muted;
+  color: @on_surface_variant;
   background: transparent;
   border: 1px solid transparent;
   border-radius: 6px;
@@ -62,29 +43,29 @@ tooltip label {
 }
 
 #workspaces button:hover {
-  background: @bg-tertiary;
-  color: @text-secondary;
-  border-color: @border-subtle;
+  background: @surface_variant;
+  color: @on_surface;
+  border-color: @border;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 #workspaces button.active {
-  color: @text-primary;
-  background: @bg-secondary;
-  border-color: @border-default;
+  color: @on_background;
+  background: @surface;
+  border-color: @border_focused;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 #workspaces button.urgent {
-  color: @accent-red;
-  background: rgba(239, 68, 68, 0.1);
-  border-color: @accent-red;
+  color: @error;
+  background: rgba(180, 66, 66, 0.1);
+  border-color: @error;
 }
 
 #window {
   padding: 6px 20px;
   margin: 6px 12px;
-  color: @text-secondary;
+  color: @on_surface;
   font-weight: 400;
   background: transparent;
 }
@@ -98,8 +79,8 @@ tooltip label {
 #tray {
   padding: 6px 14px;
   margin: 6px 3px;
-  background: @bg-secondary;
-  border: 1px solid @border-subtle;
+  background: @surface;
+  border: 1px solid @border;
   border-radius: 6px;
   transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -110,62 +91,62 @@ tooltip label {
 #memory:hover,
 #network:hover,
 #pulseaudio:hover {
-  background: @bg-tertiary;
-  border-color: @border-default;
+  background: @surface_variant;
+  border-color: @border_focused;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 #clock {
-  color: @text-primary;
+  color: @on_background;
   font-weight: 600;
   padding: 6px 18px;
-  background: @bg-tertiary;
-  border-color: @border-default;
+  background: @surface_variant;
+  border-color: @border_focused;
 }
 
 #battery {
-  color: @accent-green;
+  color: @success;
 }
 
 #battery.charging {
-  color: @accent-emerald;
+  color: @success;
 }
 
 #battery.warning:not(.charging) {
-  color: @accent-amber;
-  border-color: rgba(245, 158, 11, 0.3);
+  color: @warning;
+  border-color: rgba(225, 193, 53, 0.3);
 }
 
 #battery.critical:not(.charging) {
-  color: @accent-red;
-  background: rgba(239, 68, 68, 0.1);
-  border-color: @accent-red;
+  color: @error;
+  background: rgba(180, 66, 66, 0.1);
+  border-color: @error;
 }
 
 #cpu {
-  color: @accent-sky;
+  color: @info;
 }
 
 #memory {
-  color: @accent-purple;
+  color: @info;
 }
 
 #network {
-  color: @accent-emerald;
+  color: @success;
 }
 
 #network.disconnected {
-  color: @text-muted;
-  border-color: @border-subtle;
+  color: @on_surface_variant;
+  border-color: @border;
   opacity: 0.6;
 }
 
 #pulseaudio {
-  color: @accent-blue;
+  color: @info;
 }
 
 #pulseaudio.muted {
-  color: @text-muted;
+  color: @on_surface_variant;
   opacity: 0.6;
 }
 
@@ -178,25 +159,25 @@ tooltip label {
 }
 
 #tray > .needs-attention {
-  color: @accent-amber;
+  color: @warning;
   -gtk-icon-effect: highlight;
 }
 
 #tray menu {
-  background: @bg-secondary;
-  border: 1px solid @border-default;
+  background: @surface;
+  border: 1px solid @border;
   border-radius: 8px;
   padding: 6px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
 
 #tray menuitem {
-  color: @text-primary;
+  color: @on_surface;
   border-radius: 4px;
   padding: 8px 14px;
   transition: all 150ms ease;
 }
 
 #tray menuitem:hover {
-  background: @bg-tertiary;
+  background: @surface_variant;
 }

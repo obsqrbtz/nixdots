@@ -11,6 +11,7 @@
   home.stateVersion = "24.11";
 
   home.packages = with pkgs; [
+    procps
     inputs.clrsync.packages.x86_64-linux.clrsync
 
     nodejs_22
@@ -114,19 +115,25 @@
     enable = true;
     package = inputs.clrsync.packages.${pkgs.system}.default;
 
-    defaultTheme = "cursed";
-    palettesPath = "~/.config/clrsync/palettes";
+    defaultTheme = "dark";
+    palettesPath = "~/nixdots/config/clrsync/palettes";
     font = "JetBrainsMono Nerd Font Mono";
     fontSize = 14;
 
-    # Set to true to apply theme on activation
     applyTheme = true;
 
     templates = {
-      formats-demo = {
+      kitty = {
         enabled = true;
-        inputPath = "~/.config/clrsync/templates/formats-demo";
-        outputPath = "~/.config/clrsync/formats-demo";
+        inputPath = "~/nixdots/config/clrsync/templates/kitty-colors.conf";
+        outputPath = "~/.config/kitty/clrsync.conf";
+        reloadCmd = "${pkgs.procps}/bin/pkill -SIGUSR1 kitty";
+      };
+      waybar = {
+        enabled = true;
+        inputPath = "~/nixdots/config/clrsync/templates/waybar.css";
+        outputPath = "~/.config/waybar/colors.css";
+        reloadCmd = "${pkgs.procps}/bin/pkill -SIGUSR2 waybar";
       };
     };
   };

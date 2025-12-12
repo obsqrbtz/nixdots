@@ -31,7 +31,7 @@ let
       reloadCmd = mkOption {
         type = types.str;
         default = "";
-        description = "Command to run after generating the output (e.g., to reload the application).";
+        description = "Command to run after generating the output.";
       };
     };
   };
