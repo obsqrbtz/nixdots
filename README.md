@@ -1,6 +1,6 @@
 # Nixdots
 
-Personal configuration boilerplate
+Personal configuration
 
 ## Setup
 

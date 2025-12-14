@@ -43,6 +43,7 @@
         "hyprland/window" = {
           format = "{}";
           max-length = 50;
+          empty_format = "";
         };
         clock = {
           format = "{:%H:%M}";

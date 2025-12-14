@@ -70,6 +70,11 @@ tooltip label {
   border-radius: 6px;
 }
 
+window#waybar.empty #window {
+  background: transparent;
+  border: none;
+}
+
 #clock,
 #battery,
 #cpu,
