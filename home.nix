@@ -10,6 +10,7 @@
     ./home/common.nix
     ./home/session/gnome.nix
     ./home/session/hyprland.nix
+    inputs.clrsync.homeManagerModules.default
   ];
 
   gtk = {

@@ -112,6 +112,7 @@
 
   programs.clrsync = {
     enable = true;
+    package = inputs.clrsync.packages.x86_64-linux.default;
     defaultTheme = "dark";
     palettesPath = "~/nixdots/config/clrsync/palettes";
     font = "JetBrainsMono Nerd Font Mono";

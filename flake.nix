@@ -60,10 +60,6 @@
         extraSpecialArgs = { inherit inputs; };
         modules = [
           ./home.nix
-          clrsync.homeManagerModules.default
-          {
-            programs.clrsync.package = clrsync.packages.x86_64-linux.default;
-          }
         ];
       };
     };
