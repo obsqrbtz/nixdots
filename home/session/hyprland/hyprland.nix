@@ -19,18 +19,21 @@
       ];
 
       input = {
-        kb_layout = "us";
+        kb_layout = "us, ru";
+        kb_options = "grp:alt_shift_toggle";
         follow_mouse = 1;
-        touchpad = { natural_scroll = true; };
+        touchpad = {
+          natural_scroll = true;
+        };
         sensitivity = 0;
       };
 
-     general = {
+      general = {
         gaps_in = 5;
         gaps_out = 10;
         border_size = 2;
         "col.active_border" = "rgba(fafafaff)";
-        "col.inactive_border" = "rgba(333333aa)";				
+        "col.inactive_border" = "rgba(333333aa)";
         layout = "dwindle";
         allow_tearing = false;
       };
@@ -63,7 +66,9 @@
         preserve_split = true;
       };
 
-      master = { new_status = "master"; };
+      master = {
+        new_status = "master";
+      };
 
       misc = {
         force_default_wallpaper = 0;
@@ -137,9 +142,9 @@
         ", XF86AudioPrev, exec, playerctl previous"
       ];
 
-      bindm = [ 
-        "$mod, mouse:272, movewindow" 
-        "$mod, mouse:273, resizewindow" 
+      bindm = [
+        "$mod, mouse:272, movewindow"
+        "$mod, mouse:273, resizewindow"
       ];
     };
   };
