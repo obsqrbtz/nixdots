@@ -10,7 +10,6 @@
     ./home/common.nix
     ./home/session/gnome.nix
     ./home/session/hyprland.nix
-    inputs.clrsync.homeManagerModules.default
   ];
 
   gtk = {
@@ -29,6 +28,8 @@
     name = "Bibata-Modern-Ice";
     package = pkgs.bibata-cursors;
     size = 24;
+    gtk.enable = true;
+    x11.enable = true;
   };
 
 }

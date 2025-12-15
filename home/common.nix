@@ -6,20 +6,19 @@
 }:
 
 {
+
   home.username = "dan";
   home.homeDirectory = "/home/dan";
   home.stateVersion = "24.11";
 
   home.packages = with pkgs; [
     procps
-
     nodejs_22
     nodePackages.pnpm
     nodePackages.typescript
 
     rustc
     cargo
-
     go
     gopls
 
@@ -112,7 +111,6 @@
 
   programs.clrsync = {
     enable = true;
-    package = inputs.clrsync.packages.x86_64-linux.default;
     defaultTheme = "dark";
     palettesPath = "~/nixdots/config/clrsync/palettes";
     font = "JetBrainsMono Nerd Font Mono";

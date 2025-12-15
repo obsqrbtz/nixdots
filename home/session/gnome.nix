@@ -1,8 +1,5 @@
 { config, pkgs, ... }:
 {
-  home.packages = with pkgs; [
-    gnome-terminal
-  ];
   dconf.enable = true;
   programs.gnome-shell = {
     enable = true;

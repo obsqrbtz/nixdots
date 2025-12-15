@@ -5,17 +5,14 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1765745229,
-        "narHash": "sha256-85K8hJzaI/koXdXeZhoLjbEZtYhis9rLCsWMnCzm4sI=",
-        "owner": "obsqrbtz",
-        "repo": "clrsync",
-        "rev": "e44d4414530665045090bca3a10203aadc8f8202",
-        "type": "github"
+        "lastModified": 1765778578,
+        "narHash": "sha256-xmpewDGhzJ7amLqpbWnPeIl+pnqp03ce4m4SFUUuTNY=",
+        "path": "/home/dan/src/clrsync",
+        "type": "path"
       },
       "original": {
-        "owner": "obsqrbtz",
-        "repo": "clrsync",
-        "type": "github"
+        "path": "/home/dan/src/clrsync",
+        "type": "path"
       }
     },
     "home-manager": {
@@ -56,15 +53,15 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1764950072,
-        "narHash": "sha256-BmPWzogsG2GsXZtlT+MTcAWeDK5hkbGRZTeZNW42fwA=",
-        "owner": "NixOS",
+        "lastModified": 1765472234,
+        "narHash": "sha256-9VvC20PJPsleGMewwcWYKGzDIyjckEz8uWmT0vCDYK0=",
+        "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "f61125a668a320878494449750330ca58b78c557",
+        "rev": "2fbfb1d73d239d2402a8fe03963e37aab15abe8b",
         "type": "github"
       },
       "original": {
-        "owner": "NixOS",
+        "owner": "nixos",
         "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
