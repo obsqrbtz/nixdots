@@ -5,14 +5,17 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1765778578,
-        "narHash": "sha256-xmpewDGhzJ7amLqpbWnPeIl+pnqp03ce4m4SFUUuTNY=",
-        "path": "/home/dan/src/clrsync",
-        "type": "path"
+        "lastModified": 1765786154,
+        "narHash": "sha256-EhUnYg89cSwD/NTzNPeIW4iRkIg9I1VP7YlK4ACsuBc=",
+        "owner": "obsqrbtz",
+        "repo": "clrsync",
+        "rev": "1e2c7faa380c982441aa5bd38b36c4f78d4ade77",
+        "type": "github"
       },
       "original": {
-        "path": "/home/dan/src/clrsync",
-        "type": "path"
+        "owner": "obsqrbtz",
+        "repo": "clrsync",
+        "type": "github"
       }
     },
     "home-manager": {
