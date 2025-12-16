@@ -8,12 +8,6 @@
     ../../modules/session/hyprland.nix
   ];
 
-  environment.systemPackages = with pkgs; [
-    pciutils
-    usbutils
-    os-prober
-  ];
-
   networking.hostName = "nixos-desktop";
 
   networking.wg-quick.interfaces = {
@@ -35,13 +29,8 @@
     };
   };
 
-  boot.loader.grub = {
-    enable = true;
-    device = "nodev";
-    useOSProber = true;
-  };
+  boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.systemd-boot.enable = false;
 
   services.xserver.xkb = {
     layout = "us";
@@ -49,6 +38,11 @@
   };
 
   hardware.graphics.enable = true;
+
+  environment.systemPackages = with pkgs; [
+    pciutils
+    usbutils
+  ];
 
   system.stateVersion = "24.11";
 }

@@ -71,6 +71,8 @@
       nix-rebuild = "sudo nixos-rebuild switch --flake .";
       home-rebuild = "home-manager switch --flake .";
       nvim-basedgoose = "NVIM_APPNAME=basedgoose nvim";
+      vpn-up = "sudo wg-quick up timeweb";
+      vpn-down = "sudo wg-quick down timeweb";
     };
   };
 
