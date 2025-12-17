@@ -9,7 +9,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    clrsync.url = "github:obsqrbtz/clrsync";
+    clrsync.url = "github:obsqrbtz/clrsync/dev";
     #clrsync.url = "path:/home/dan/src/clrsync";
   };
 
